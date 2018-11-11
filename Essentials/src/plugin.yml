@@ -187,7 +187,11 @@ commands:
   home:
     description: Teleport to your home.
     usage: /<command> [player:][name]
-    aliases: [ehome,homes,ehomes]
+    aliases: [ehome]
+  homes:
+     description: List of all of your homes. 
+     usage: /<command> [player]
+     aliases: [ehomes]
   ignore:
     description: Ignore or unignore other players.
     usage: /<command> <player>
