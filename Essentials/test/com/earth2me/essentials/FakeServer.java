@@ -10,6 +10,7 @@ import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarFlag;
 import org.bukkit.boss.BarStyle;
 import org.bukkit.boss.BossBar;
+import org.bukkit.boss.KeyedBossBar;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.command.PluginCommand;
@@ -1166,6 +1167,30 @@ public class FakeServer implements Server {
 	@Override
 	public LootTable getLootTable(NamespacedKey arg0) {
         throw new UnsupportedOperationException("Not supported yet.");
+	}
+
+	@Override
+	public KeyedBossBar createBossBar(NamespacedKey arg0, String arg1, BarColor arg2, BarStyle arg3, BarFlag... arg4) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public KeyedBossBar getBossBar(NamespacedKey arg0) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Iterator<KeyedBossBar> getBossBars() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean removeBossBar(NamespacedKey arg0) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

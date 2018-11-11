@@ -11,6 +11,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.material.MaterialData;
 import org.bukkit.metadata.MetadataValue;
 import org.bukkit.plugin.Plugin;
+import org.bukkit.util.BoundingBox;
+import org.bukkit.util.RayTraceResult;
 import org.bukkit.util.Vector;
 
 import java.io.File;
@@ -18,6 +20,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
+import java.util.function.Predicate;
 
 
 public class FakeWorld implements World {
@@ -742,5 +745,78 @@ public class FakeWorld implements World {
 	@Override
 	public <T> boolean setGameRule(GameRule<T> arg0, T arg1) {
         throw new UnsupportedOperationException("Not supported yet.");
+	}
+
+	@Override
+	public Collection<Entity> getNearbyEntities(Location location, double x, double y, double z,
+			Predicate<Entity> filter) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Collection<Entity> getNearbyEntities(BoundingBox boundingBox) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Collection<Entity> getNearbyEntities(BoundingBox boundingBox, Predicate<Entity> filter) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public RayTraceResult rayTraceEntities(Location start, Vector direction, double maxDistance) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public RayTraceResult rayTraceEntities(Location start, Vector direction, double maxDistance, double raySize) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public RayTraceResult rayTraceEntities(Location start, Vector direction, double maxDistance,
+			Predicate<Entity> filter) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public RayTraceResult rayTraceEntities(Location start, Vector direction, double maxDistance, double raySize,
+			Predicate<Entity> filter) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public RayTraceResult rayTraceBlocks(Location start, Vector direction, double maxDistance) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public RayTraceResult rayTraceBlocks(Location start, Vector direction, double maxDistance,
+			FluidCollisionMode fluidCollisionMode) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public RayTraceResult rayTraceBlocks(Location start, Vector direction, double maxDistance,
+			FluidCollisionMode fluidCollisionMode, boolean ignorePassableBlocks) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public RayTraceResult rayTrace(Location start, Vector direction, double maxDistance,
+			FluidCollisionMode fluidCollisionMode, boolean ignorePassableBlocks, double raySize,
+			Predicate<Entity> filter) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
