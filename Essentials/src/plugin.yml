@@ -105,10 +105,6 @@ commands:
   fly:
     description: Take off, and soar!
     usage: /<command> [player] [on|off]
-  fireball:
-    description: Throw a fireball.
-    usage: /<command> [small|skull]
-    aliases: [efireball,fireentity,efireentity,fireskull,efireskull]
   firework:
     description: Allows you to modify a stack of fireworks.
     usage: /<command> <<meta param>|power [amount]|clear|fire [amount]>
