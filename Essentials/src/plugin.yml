@@ -197,10 +197,6 @@ commands:
     description: List all online players.
     usage: /<command> [group]
     aliases: [online,playerlist]
-  mail:
-    description: Manages inter-player, intra-server mail.
-    usage: /<command> [read|clear|send [to] [message]|sendall [message]]
-    aliases: [email,eemail,memo,ememo]
   me:
     description: Describes an action in the context of the player.
     usage: /<command> <description>

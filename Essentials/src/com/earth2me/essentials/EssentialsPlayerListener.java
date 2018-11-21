@@ -294,16 +294,6 @@ public class EssentialsPlayerListener implements Listener {
 					motdTask.run();
 				}
 
-				if (!ess.getSettings().isCommandDisabled("mail") && user.isAuthorized("essentials.mail")) {
-					final List<String> mail = user.getMails();
-					if (mail.isEmpty()) {
-						if (ess.getSettings().isNotifyNoNewMail()) {
-							user.sendMessage(tl("noNewMail")); // Only notify if they want us to.
-						}
-					} else {
-						user.notifyOfMail();
-					}
-				}
 
 				if (user.isAuthorized("essentials.fly.safelogin")) {
 					user.getBase().setFallDistance(0);

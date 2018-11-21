@@ -68,7 +68,6 @@ public abstract class UserData extends PlayerExtension implements IConf {
 		lastTeleportTimestamp = _getLastTeleportTimestamp();
 		lastHealTimestamp = _getLastHealTimestamp();
 		jail = _getJail();
-		mails = _getMails();
 		teleportEnabled = _getTeleportEnabled();
 		godmode = _getGodModeEnabled();
 		muted = _getMuted();
@@ -392,32 +391,6 @@ public abstract class UserData extends PlayerExtension implements IConf {
 			config.setProperty("jail", jail);
 		}
 		config.save();
-	}
-
-	private List<String> mails;
-
-	private List<String> _getMails() {
-		return config.getStringList("mail");
-	}
-
-	public List<String> getMails() {
-		return mails;
-	}
-
-	public void setMails(List<String> mails) {
-		if (mails == null) {
-			config.removeProperty("mail");
-			mails = _getMails();
-		} else {
-			config.setProperty("mail", mails);
-		}
-		this.mails = mails;
-		config.save();
-	}
-
-	public void addMail(String mail) {
-		mails.add(mail);
-		setMails(mails);
 	}
 
 	private boolean teleportEnabled;

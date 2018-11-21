@@ -62,7 +62,6 @@ public class User extends UserData implements Comparable<User>, IMessageRecipien
 	private long afkSince;
 	private Map<User, BigDecimal> confirmingPayments = new WeakHashMap<>();
 	private String confirmingClearCommand;
-	private long lastNotifiedAboutMailsMs;
 
 	public User(final Player base, final IEssentials ess) {
 		super(base, ess);
@@ -874,14 +873,4 @@ public class User extends UserData implements Comparable<User>, IMessageRecipien
 		}
 	}
 
-	public void notifyOfMail() {
-		List<String> mails = getMails();
-		if (mails != null && !mails.isEmpty()) {
-			int notifyPlayerOfMailCooldown = ess.getSettings().getNotifyPlayerOfMailCooldown() * 1000;
-			if (System.currentTimeMillis() - lastNotifiedAboutMailsMs >= notifyPlayerOfMailCooldown) {
-				sendMessage(tl("youHaveNewMail", mails.size()));
-				lastNotifiedAboutMailsMs = System.currentTimeMillis();
-			}
-		}
-	}
 }

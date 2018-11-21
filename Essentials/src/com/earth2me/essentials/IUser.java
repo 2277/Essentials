@@ -131,10 +131,6 @@ public interface IUser {
 
     void setJail(String jail);
 
-    List<String> getMails();
-
-    void addMail(String mail);
-
     boolean isAfk();
 
     void setIgnoreMsg(boolean ignoreMsg);
