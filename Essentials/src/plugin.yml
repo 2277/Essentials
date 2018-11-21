@@ -56,9 +56,6 @@ commands:
   condense:
     description: Condenses items into a more compact blocks.
     usage: /<command> [<itemname>|<id>|hand|inventory]
-  compass:
-    description: Describes your current bearing.
-    usage: /<command>
   createkit:
     description: Create a kit in game!
     usage: /<command> <kitname> <delay>
