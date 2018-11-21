@@ -732,7 +732,62 @@ public class FakeWorld implements World {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-	@Override
+    @Override
+    public Collection<Entity> getNearbyEntities(Location location, double x, double y, double z, Predicate<Entity> filter) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Collection<Entity> getNearbyEntities(BoundingBox boundingBox) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Collection<Entity> getNearbyEntities(BoundingBox boundingBox, Predicate<Entity> filter) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public RayTraceResult rayTraceEntities(Location start, Vector direction, double maxDistance) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public RayTraceResult rayTraceEntities(Location start, Vector direction, double maxDistance, double raySize) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public RayTraceResult rayTraceEntities(Location start, Vector direction, double maxDistance, Predicate<Entity> filter) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public RayTraceResult rayTraceEntities(Location start, Vector direction, double maxDistance, double raySize, Predicate<Entity> filter) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public RayTraceResult rayTraceBlocks(Location start, Vector direction, double maxDistance) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public RayTraceResult rayTraceBlocks(Location start, Vector direction, double maxDistance, FluidCollisionMode fluidCollisionMode) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public RayTraceResult rayTraceBlocks(Location start, Vector direction, double maxDistance, FluidCollisionMode fluidCollisionMode, boolean ignorePassableBlocks) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public RayTraceResult rayTrace(Location start, Vector direction, double maxDistance, FluidCollisionMode fluidCollisionMode, boolean ignorePassableBlocks, double raySize, Predicate<Entity> filter) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
 	public <T> T getGameRuleDefault(GameRule<T> arg0) {
         throw new UnsupportedOperationException("Not supported yet.");
 	}
@@ -745,78 +800,5 @@ public class FakeWorld implements World {
 	@Override
 	public <T> boolean setGameRule(GameRule<T> arg0, T arg1) {
         throw new UnsupportedOperationException("Not supported yet.");
-	}
-
-	@Override
-	public Collection<Entity> getNearbyEntities(Location location, double x, double y, double z,
-			Predicate<Entity> filter) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Collection<Entity> getNearbyEntities(BoundingBox boundingBox) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Collection<Entity> getNearbyEntities(BoundingBox boundingBox, Predicate<Entity> filter) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public RayTraceResult rayTraceEntities(Location start, Vector direction, double maxDistance) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public RayTraceResult rayTraceEntities(Location start, Vector direction, double maxDistance, double raySize) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public RayTraceResult rayTraceEntities(Location start, Vector direction, double maxDistance,
-			Predicate<Entity> filter) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public RayTraceResult rayTraceEntities(Location start, Vector direction, double maxDistance, double raySize,
-			Predicate<Entity> filter) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public RayTraceResult rayTraceBlocks(Location start, Vector direction, double maxDistance) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public RayTraceResult rayTraceBlocks(Location start, Vector direction, double maxDistance,
-			FluidCollisionMode fluidCollisionMode) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public RayTraceResult rayTraceBlocks(Location start, Vector direction, double maxDistance,
-			FluidCollisionMode fluidCollisionMode, boolean ignorePassableBlocks) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public RayTraceResult rayTrace(Location start, Vector direction, double maxDistance,
-			FluidCollisionMode fluidCollisionMode, boolean ignorePassableBlocks, double raySize,
-			Predicate<Entity> filter) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 }

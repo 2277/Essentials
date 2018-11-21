@@ -219,6 +219,26 @@ public class OfflinePlayer implements Player {
     }
 
     @Override
+    public Block getTargetBlockExact(int maxDistance) {
+        return null;
+    }
+
+    @Override
+    public Block getTargetBlockExact(int maxDistance, FluidCollisionMode fluidCollisionMode) {
+        return null;
+    }
+
+    @Override
+    public RayTraceResult rayTraceBlocks(double maxDistance) {
+        return null;
+    }
+
+    @Override
+    public RayTraceResult rayTraceBlocks(double maxDistance, FluidCollisionMode fluidCollisionMode) {
+        return null;
+    }
+
+    @Override
     public int getFireTicks() {
         return 0;
     }
@@ -1491,6 +1511,11 @@ public class OfflinePlayer implements Player {
     }
 
     @Override
+    public int getClientViewDistance() {
+        return 0;
+    }
+
+    @Override
     public String getLocale() {
         return null;
     }
@@ -1538,6 +1563,11 @@ public class OfflinePlayer implements Player {
     }
 
     @Override
+    public BoundingBox getBoundingBox() {
+        return null;
+    }
+
+    @Override
     public List<Entity> getPassengers() {
         return null;
     }
@@ -1561,39 +1591,4 @@ public class OfflinePlayer implements Player {
 	public void updateCommands() {
 	}
 
-	@Override
-	public Block getTargetBlockExact(int maxDistance) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Block getTargetBlockExact(int maxDistance, FluidCollisionMode fluidCollisionMode) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public RayTraceResult rayTraceBlocks(double maxDistance) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public RayTraceResult rayTraceBlocks(double maxDistance, FluidCollisionMode fluidCollisionMode) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public BoundingBox getBoundingBox() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public int getClientViewDistance() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 }
