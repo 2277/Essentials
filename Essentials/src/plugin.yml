@@ -186,9 +186,6 @@ commands:
     description: Obtains the specified kit or views all available kits.
     usage: /<command> [kit] [player]
     aliases: [kits]
-  me:
-    description: Describes an action in the context of the player.
-    usage: /<command> <description>
   more:
     description: Fills the item stack in hand to maximum size.
     usage: /<command>
