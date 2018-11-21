@@ -5,7 +5,9 @@ import static com.earth2me.essentials.I18n.tl;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
+import java.util.stream.Collectors;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Server;
 import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
@@ -45,7 +47,8 @@ public class Commandhome extends EssentialsCommand {
 					user.getTeleport().teleport(bed, charge, TeleportCause.COMMAND);
 					throw new NoChargeException();
 				} else {
-					throw new Exception(tl("bedMissing"));
+					throw new Exception(
+							user.equals(player) ? tl("bedMissing") : tl("bedMissingOther", player.getDisplayName()));
 				}
 			}
 			goHome(user, player, homeName.toLowerCase(Locale.ENGLISH), charge);
@@ -90,7 +93,19 @@ public class Commandhome extends EssentialsCommand {
 				&& !user.isAuthorized("essentials.worlds." + loc.getWorld().getName())) { throw new Exception(
 						tl("noPerm", "essentials.worlds." + loc.getWorld().getName())); }
 		user.getTeleport().teleport(loc, charge, TeleportCause.COMMAND);
-		user.sendMessage(tl("teleportHome", home));
+		if (user.equals(player)) {
+			user.sendMessage(tl("teleportHome", home));
+		} else {
+			user.sendMessage(tl("teleportHomeOther", player.getDisplayName(), home));
+		}
+	}
+
+	private List<String> getHomes(User user) {
+		List<String> homes = user.getHomes();
+		if (user.isAuthorized("essentials.home.bed")) {
+			homes.add("bed");
+		}
+		return homes;
 	}
 
 	@Override
@@ -100,7 +115,30 @@ public class Commandhome extends EssentialsCommand {
 
 		if (args.length == 1) {
 			if (canVisitOthers) {
-				return getPlayers(server, user);
+				String[] nameParts = args[0].split(":");
+				if (nameParts.length == 1 && !args[0].endsWith(":")) {
+					// no :
+					List<String> homes = getHomes(user).stream()
+							.filter(s -> s.startsWith(args[0].toLowerCase()))
+							.collect(Collectors.toList());
+
+					return homes.isEmpty() ? getPlayers(server, user).stream()
+							.filter(s -> s.startsWith(args[0].toLowerCase()))
+							.collect(Collectors.toList()) : homes;
+
+				} else {
+					
+					try {
+						User otherUser = getPlayer(server, nameParts, 0, true, true);
+						return getHomes(otherUser).stream()
+								.map(s -> nameParts[0] + ":" + s)
+								.collect(Collectors.toList());
+					} catch (Exception ex) {
+	
+						return Collections.emptyList();
+					}
+				}
+
 			} else {
 				List<String> homes = user.getHomes();
 				if (user.isAuthorized("essentials.home.bed")) {
@@ -108,20 +146,34 @@ public class Commandhome extends EssentialsCommand {
 				}
 				return homes;
 			}
-		} else if (args.length == 2 && canVisitOthers) {
-			try {
-				User otherUser = getPlayer(server, args, 0, true, true);
-				List<String> homes = otherUser.getHomes();
-				if (user.isAuthorized("essentials.home.bed")) {
-					homes.add("bed");
-				}
-				return homes;
-			} catch (Exception ex) {
-				// No such user
-				return Collections.emptyList();
-			}
-		} else {
-			return Collections.emptyList();
 		}
+
+		return Collections.emptyList();
+
+//		if (args.length == 1) {
+//			if (canVisitOthers) {
+//				return getPlayers(server, user);
+//			} else {
+//				List<String> homes = user.getHomes();
+//				if (user.isAuthorized("essentials.home.bed")) {
+//					homes.add("bed");
+//				}
+//				return homes;
+//			}
+//		} else if (args.length == 2 && canVisitOthers) {
+//			try {
+//				User otherUser = getPlayer(server, args, 0, true, true);
+//				List<String> homes = otherUser.getHomes();
+//				if (user.isAuthorized("essentials.home.bed")) {
+//					homes.add("bed");
+//				}
+//				return homes;
+//			} catch (Exception ex) {
+//				// No such user
+//				return Collections.emptyList();
+//			}
+//		} else {
+//			return Collections.emptyList();
+//		}
 	}
 }
