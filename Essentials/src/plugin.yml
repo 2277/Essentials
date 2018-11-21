@@ -390,10 +390,6 @@ commands:
   tptoggle:
     description: Blocks all forms of teleportation.
     usage: /<command> [player] [on|off]
-  tree:
-    description: Spawn a tree where you are looking.
-    usage: /<command> <tree|birch|redwood|redmushroom|brownmushroom|jungle|junglebush|swamp>
-    aliases: [etree]
   unban:
     description: Unbans the specified player.
     usage: /<command> <player>
