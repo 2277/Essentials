@@ -186,10 +186,6 @@ commands:
     description: Obtains the specified kit or views all available kits.
     usage: /<command> [kit] [player]
     aliases: [kits]
-  list:
-    description: List all online players.
-    usage: /<command> [group]
-    aliases: [online,playerlist]
   me:
     description: Describes an action in the context of the player.
     usage: /<command> <description>
