@@ -12,10 +12,6 @@ commands:
   afk:
     description: Marks you as away-from-keyboard.
     usage: /<command> [player/message...]
-  antioch:
-    description: 'A little surprise for operators.'
-    usage: /<command> [message]
-    aliases: [eantioch,grenade,egrenade,tnt,etnt]
   back:
     description: Teleports you to your location prior to tp/spawn/warp.
     usage: /<command>
