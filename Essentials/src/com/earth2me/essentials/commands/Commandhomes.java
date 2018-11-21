@@ -21,7 +21,7 @@ public class Commandhomes extends EssentialsCommand {
 	public void run(Server server, User user, String commandLabel, String[] args) throws Exception {
 		User player = user;
 		if (args.length > 0 && user.isAuthorized("essentials.home.others")) {
-			player = getPlayer(server, user, args, 0);
+			player = getPlayer(server, args, 0, true, true);
 		}
 		Location bed = player.getBase().getBedSpawnLocation();
 		List<String> homes = player.getHomes();
