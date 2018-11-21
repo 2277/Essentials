@@ -229,10 +229,6 @@ commands:
     description: Change your nickname or that of another player.
     usage: /<command> [player] <nickname|off>
     aliases: [nickname]
-  nuke:
-    description: May death rain upon them.
-    usage: /<command> [player]
-    aliases: [enuke]
   pay:
     description: Pays another player from your balance.
     usage: /<command> <player> <amount>
