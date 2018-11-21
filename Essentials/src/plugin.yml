@@ -72,9 +72,6 @@ commands:
   delwarp:
     description: Deletes the specified warp.
     usage: /<command> <warp>
-  depth:
-    description: States current depth, relative to sea level.
-    usage: /depth
   disposal:
     description: Opens a portable disposal menu.
     usage: /<command>
