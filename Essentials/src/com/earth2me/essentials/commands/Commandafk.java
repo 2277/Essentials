@@ -2,6 +2,9 @@ package com.earth2me.essentials.commands;
 
 import com.earth2me.essentials.CommandSource;
 import com.earth2me.essentials.User;
+
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Server;
 
 import java.util.Collections;
@@ -77,7 +80,7 @@ public class Commandafk extends EssentialsCommand {
             user.setAfkMessage(message);
         }
         if (!msg.isEmpty()) {
-            ess.broadcastMessage(user, msg);
+            ess.broadcastMessage(user, msg, u -> !u.isIgnoreAfkEnabled() || u.equals(user) || u.equals(sender));
         }
     }
 

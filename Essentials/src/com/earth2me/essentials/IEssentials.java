@@ -1,12 +1,10 @@
 package com.earth2me.essentials;
 
-import com.earth2me.essentials.api.IItemDb;
-import com.earth2me.essentials.api.IJails;
-import com.earth2me.essentials.api.IWarps;
-import com.earth2me.essentials.metrics.Metrics;
-import com.earth2me.essentials.perm.PermissionsHandler;
-import com.earth2me.essentials.register.payment.Methods;
-import net.ess3.nms.SpawnerProvider;
+import java.util.Collection;
+import java.util.List;
+import java.util.UUID;
+import java.util.function.Supplier;
+
 import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -15,9 +13,15 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitScheduler;
 import org.bukkit.scheduler.BukkitTask;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.UUID;
+import com.earth2me.essentials.api.IItemDb;
+import com.earth2me.essentials.api.IJails;
+import com.earth2me.essentials.api.IWarps;
+import com.earth2me.essentials.metrics.Metrics;
+import com.earth2me.essentials.perm.PermissionsHandler;
+import com.earth2me.essentials.register.payment.Methods;
+import com.google.common.base.Function;
+
+import net.ess3.nms.SpawnerProvider;
 
 public interface IEssentials extends Plugin {
     void addReloadListener(IConf listener);
@@ -45,6 +49,10 @@ public interface IEssentials extends Plugin {
 
     int broadcastMessage(String message);
 
+    int broadcastMessage(String message, Function<User, Boolean> filter);
+    
+    int broadcastMessage(IUser sender, String message, Function<User, Boolean> filter);
+    
     int broadcastMessage(IUser sender, String message);
 
     int broadcastMessage(String permission, String message);

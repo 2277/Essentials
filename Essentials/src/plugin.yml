@@ -196,6 +196,15 @@ commands:
     description: Ignore or unignore other players.
     usage: /<command> <player>
     aliases: [eignore,unignore,eunignore,delignore,edelignore,remignore,eremignore,rmignore,ermignore]
+  ignoreafk:
+    description: Ignore or unignore other player\'s afk messages.
+    usage: /<command> [on|off]
+  ignorejoin:
+    description: Ignore or unignore other player\'s join messages.
+    usage: /<command> [on|off]
+  ignoreleave:
+    description: Ignore or unignore other player\'s leave messages.
+    usage: /<command> [on|off]
   info:
     description: Shows information set by the server owner.
     usage: /<command> [chapter] [page]
