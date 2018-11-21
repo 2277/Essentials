@@ -1,5 +1,25 @@
 package com.earth2me.essentials;
 
+import static com.earth2me.essentials.I18n.tl;
+
+import java.math.BigDecimal;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.Map;
+import java.util.UUID;
+import java.util.WeakHashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import org.bukkit.ChatColor;
+import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.PlayerInventory;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
+
 import com.earth2me.essentials.commands.IEssentialsCommand;
 import com.earth2me.essentials.messaging.IMessageRecipient;
 import com.earth2me.essentials.messaging.SimpleMessageRecipient;
@@ -8,35 +28,13 @@ import com.earth2me.essentials.register.payment.Methods;
 import com.earth2me.essentials.utils.DateUtil;
 import com.earth2me.essentials.utils.FormatUtil;
 import com.earth2me.essentials.utils.NumberUtil;
+
 import net.ess3.api.IEssentials;
 import net.ess3.api.MaxMoneyException;
 import net.ess3.api.events.AfkStatusChangeEvent;
-import net.ess3.api.events.JailStatusChangeEvent;
 import net.ess3.api.events.MuteStatusChangeEvent;
 import net.ess3.api.events.UserBalanceUpdateEvent;
 import net.ess3.nms.refl.ReflUtil;
-
-import org.bukkit.ChatColor;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.entity.Player;
-import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.PlayerInventory;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
-
-import java.math.BigDecimal;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
-import java.util.WeakHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import static com.earth2me.essentials.I18n.tl;
 
 public class User extends UserData implements Comparable<User>, IMessageRecipient, net.ess3.api.IUser {
 	private static final Logger logger = Logger.getLogger("Essentials");
@@ -496,30 +494,6 @@ public class User extends UserData implements Comparable<User>, IMessageRecipien
 		if (hidden == true) {
 			setLastLogout(getLastOnlineActivity());
 		}
-	}
-
-	// Returns true if status expired during this check
-	public boolean checkJailTimeout(final long currentTime) {
-		if (getJailTimeout() > 0 && getJailTimeout() < currentTime && isJailed()) {
-			final JailStatusChangeEvent event = new JailStatusChangeEvent(this, null, false);
-			ess.getServer().getPluginManager().callEvent(event);
-
-			if (!event.isCancelled()) {
-				setJailTimeout(0);
-				setJailed(false);
-				sendMessage(tl("haveBeenReleased"));
-				setJail(null);
-				try {
-					getTeleport().back();
-				} catch (Exception ex) {
-					try {
-						getTeleport().respawn(null, TeleportCause.PLUGIN);
-					} catch (Exception ex1) {}
-				}
-				return true;
-			}
-		}
-		return false;
 	}
 
 	// Returns true if status expired during this check

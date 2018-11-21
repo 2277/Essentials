@@ -80,7 +80,7 @@ public interface ITeleport {
     void teleportPlayer(IUser otherUser, Player entity, Trade chargeFor, PlayerTeleportEvent.TeleportCause cause) throws Exception;
 
     /**
-     * Teleport wrapper used to handle tp fallback on /jail and /home
+     * Teleport wrapper used to handle tp fallback on and /home
      *
      * @param chargeFor - What the user will be charged if teleportPlayer is successful
      * @param cause     - The reported teleportPlayer cause
@@ -109,12 +109,5 @@ public interface ITeleport {
      * @throws Exception
      */
     void back(Trade chargeFor) throws Exception;
-
-    /**
-     * Teleport wrapper used to handle throwing user home after a jail sentence
-     *
-     * @throws Exception
-     */
-    void back() throws Exception;
 
 }

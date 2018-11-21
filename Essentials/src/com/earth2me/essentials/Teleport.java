@@ -209,7 +209,7 @@ public class Teleport implements net.ess3.api.ITeleport {
         initTimer((long) (delay * 1000.0), teleportee, target, cashCharge, cause, false);
     }
 
-    //The respawn function is a wrapper used to handle tp fallback, on /jail and /home
+    //The respawn function is a wrapper used to handle tp fallback on /home
     @Override
     public void respawn(final Trade chargeFor, TeleportCause cause) throws Exception {
         double delay = ess.getSettings().getTeleportDelay();
@@ -271,12 +271,6 @@ public class Teleport implements net.ess3.api.ITeleport {
         final Location loc = teleportOwner.getLastLocation();
         teleportOwner.sendMessage(tl("backUsageMsg", loc.getWorld().getName(), loc.getBlockX(), loc.getBlockY(), loc.getBlockZ()));
         teleport(teleportOwner, new LocationTarget(loc), chargeFor, TeleportCause.COMMAND);
-    }
-
-    //This function is used to throw a user back after a jail sentence
-    @Override
-    public void back() throws Exception {
-        now(teleportOwner, new LocationTarget(teleportOwner.getLastLocation()), TeleportCause.COMMAND);
     }
 
     public void setTpType(TeleportType tpType) {

@@ -91,7 +91,6 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials {
     private static final Logger LOGGER = Logger.getLogger("Essentials");
     private transient ISettings settings;
     private final transient TNTExplodeListener tntListener = new TNTExplodeListener(this);
-    private transient Jails jails;
     private transient Warps warps;
     private transient Worth worth;
     private transient List<IConf> confList;
@@ -153,7 +152,6 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials {
         permissionsHandler = new PermissionsHandler(this, false);
         Economy.setEss(this);
         confList = new ArrayList<>();
-        jails = new Jails(this);
         registerListeners(server.getPluginManager());
         kits = new Kits(this);
     }
@@ -213,9 +211,6 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials {
                 itemDb = getItemDbFromConfig();
                 confList.add(itemDb);
                 execTimer.mark("Init(Worth/ItemDB)");
-                jails = new Jails(this);
-                confList.add(jails);
-                execTimer.mark("Init(Jails)");
 
                 spawnerProvider = new ProviderFactory<>(getLogger(),
                         Arrays.asList(
@@ -319,8 +314,6 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials {
         pm.registerEvents(serverListener, this);
 
         pm.registerEvents(tntListener, this);
-
-        jails.resetListener();
     }
 
     @Override
@@ -412,10 +405,6 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials {
 
             // Check authorization
             if (user != null && !user.isAuthorized(cmd, permissionPrefix)) {
-                return Collections.emptyList();
-            }
-
-            if (user != null && user.isJailed() && !user.isAuthorized(cmd, "essentials.jail.allow.")) {
                 return Collections.emptyList();
             }
 
@@ -513,15 +502,6 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials {
                 return true;
             }
 
-            if (user != null && user.isJailed() && !user.isAuthorized(cmd, "essentials.jail.allow.")) {
-                if (user.getJailTimeout() > 0) {
-                    user.sendMessage(tl("playerJailedFor", user.getName(), DateUtil.formatDateDiff(user.getJailTimeout())));
-                } else {
-                    user.sendMessage(tl("jailMessage"));
-                }
-                return true;
-            }
-
             // Run the command
             try {
                 if (user == null) {
@@ -580,11 +560,6 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials {
     @Override
     public BukkitScheduler getScheduler() {
         return this.getServer().getScheduler();
-    }
-
-    @Override
-    public IJails getJails() {
-        return jails;
     }
 
     @Override
@@ -924,7 +899,6 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials {
         public void onWorldLoad(final WorldLoadEvent event) {
             addDefaultBackPermissionsToWorld(event.getWorld());
 
-            ess.getJails().onReload();
             ess.getWarps().reloadConfig();
             for (IConf iConf : ((Essentials) ess).confList) {
                 if (iConf instanceof IEssentialsModule) {
@@ -935,7 +909,6 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials {
 
         @EventHandler(priority = EventPriority.LOW)
         public void onWorldUnload(final WorldUnloadEvent event) {
-            ess.getJails().onReload();
             ess.getWarps().reloadConfig();
             for (IConf iConf : ((Essentials) ess).confList) {
                 if (iConf instanceof IEssentialsModule) {

@@ -14,7 +14,6 @@ import org.bukkit.scheduler.BukkitScheduler;
 import org.bukkit.scheduler.BukkitTask;
 
 import com.earth2me.essentials.api.IItemDb;
-import com.earth2me.essentials.api.IJails;
 import com.earth2me.essentials.api.IWarps;
 import com.earth2me.essentials.metrics.Metrics;
 import com.earth2me.essentials.perm.PermissionsHandler;
@@ -60,8 +59,6 @@ public interface IEssentials extends Plugin {
     ISettings getSettings();
 
     BukkitScheduler getScheduler();
-
-    IJails getJails();
 
     IWarps getWarps();
 

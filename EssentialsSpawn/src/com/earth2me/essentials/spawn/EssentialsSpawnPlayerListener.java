@@ -37,10 +37,6 @@ public class EssentialsSpawnPlayerListener implements Listener {
     public void onPlayerRespawn(final PlayerRespawnEvent event) {
         final User user = ess.getUser(event.getPlayer());
 
-        if (user.isJailed() && user.getJail() != null && !user.getJail().isEmpty()) {
-            return;
-        }
-
         if (ess.getSettings().getRespawnAtHome()) {
             Location home;
             final Location bed = user.getBase().getBedSpawnLocation();

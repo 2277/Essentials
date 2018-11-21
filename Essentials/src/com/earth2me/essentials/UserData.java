@@ -67,13 +67,10 @@ public abstract class UserData extends PlayerExtension implements IConf {
 		lastLocation = _getLastLocation();
 		lastTeleportTimestamp = _getLastTeleportTimestamp();
 		lastHealTimestamp = _getLastHealTimestamp();
-		jail = _getJail();
 		teleportEnabled = _getTeleportEnabled();
 		godmode = _getGodModeEnabled();
 		muted = _getMuted();
 		muteTimeout = _getMuteTimeout();
-		jailed = _getJailed();
-		jailTimeout = _getJailTimeout();
 		lastLogin = _getLastLogin();
 		lastLogout = _getLastLogout();
 		lastLoginAddress = _getLastLoginAddress();
@@ -372,27 +369,6 @@ public abstract class UserData extends PlayerExtension implements IConf {
 		config.save();
 	}
 
-	private String jail;
-
-	private String _getJail() {
-		return config.getString("jail");
-	}
-
-	public String getJail() {
-		return jail;
-	}
-
-	public void setJail(String jail) {
-		if (jail == null || jail.isEmpty()) {
-			this.jail = null;
-			config.removeProperty("jail");
-		} else {
-			this.jail = jail;
-			config.setProperty("jail", jail);
-		}
-		config.save();
-	}
-
 	private boolean teleportEnabled;
 
 	private boolean _getTeleportEnabled() {
@@ -498,45 +474,7 @@ public abstract class UserData extends PlayerExtension implements IConf {
 		config.setProperty("timestamps.mute", time);
 		config.save();
 	}
-
-	private boolean jailed;
-
-	private boolean _getJailed() {
-		return config.getBoolean("jailed", false);
-	}
-
-	public boolean isJailed() {
-		return jailed;
-	}
-
-	public void setJailed(boolean set) {
-		jailed = set;
-		config.setProperty("jailed", set);
-		config.save();
-	}
-
-	public boolean toggleJailed() {
-		boolean ret = !isJailed();
-		setJailed(ret);
-		return ret;
-	}
-
-	private long jailTimeout;
-
-	private long _getJailTimeout() {
-		return config.getLong("timestamps.jail", 0);
-	}
-
-	public long getJailTimeout() {
-		return jailTimeout;
-	}
-
-	public void setJailTimeout(long time) {
-		jailTimeout = time;
-		config.setProperty("timestamps.jail", time);
-		config.save();
-	}
-
+	
 	private long lastLogin;
 
 	private long _getLastLogin() {

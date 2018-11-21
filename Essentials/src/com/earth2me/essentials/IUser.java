@@ -127,10 +127,6 @@ public interface IUser {
 
     void setLastTeleportTimestamp(long time);
 
-    String getJail();
-
-    void setJail(String jail);
-
     boolean isAfk();
 
     void setIgnoreMsg(boolean ignoreMsg);
