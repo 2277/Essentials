@@ -272,9 +272,6 @@ commands:
   sethome:
     description: Set your home to your current location.
     usage: /<command> [[player:]name]
-  setslot:
-    description: Sets player's inventory slot.
-    usage: /<command> <player>
   setwarp:
     description: Creates a new warp.
     usage: /<command> <warp>
