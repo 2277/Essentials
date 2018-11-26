@@ -1,8 +1,8 @@
 package com.earth2me.essentials.textreader;
 
-import com.earth2me.essentials.CommandSource;
-
 import java.util.List;
+
+import com.earth2me.essentials.CommandSource;
 
 public class SimpleTextPager {
     private final transient IText text;

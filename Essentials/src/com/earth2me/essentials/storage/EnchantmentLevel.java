@@ -1,8 +1,8 @@
 package com.earth2me.essentials.storage;
 
-import org.bukkit.enchantments.Enchantment;
-
 import java.util.Map.Entry;
+
+import org.bukkit.enchantments.Enchantment;
 
 
 public class EnchantmentLevel implements Entry<Enchantment, Integer> {

@@ -1,9 +1,10 @@
 package com.earth2me.essentials.commands;
 
-import com.earth2me.essentials.MetaItemStack;
-import com.earth2me.essentials.User;
-import com.earth2me.essentials.utils.NumberUtil;
-import com.google.common.collect.Lists;
+import static com.earth2me.essentials.I18n.tl;
+
+import java.util.Collections;
+import java.util.List;
+
 import org.bukkit.DyeColor;
 import org.bukkit.FireworkEffect;
 import org.bukkit.Material;
@@ -14,10 +15,10 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.FireworkMeta;
 import org.bukkit.util.Vector;
 
-import java.util.Collections;
-import java.util.List;
-
-import static com.earth2me.essentials.I18n.tl;
+import com.earth2me.essentials.MetaItemStack;
+import com.earth2me.essentials.User;
+import com.earth2me.essentials.utils.NumberUtil;
+import com.google.common.collect.Lists;
 
 //This command has quite a complicated syntax, in theory it has 4 seperate syntaxes which are all variable:
 //

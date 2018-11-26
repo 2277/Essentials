@@ -1,14 +1,16 @@
 package com.earth2me.essentials.commands;
 
+import static com.earth2me.essentials.I18n.tl;
+
+import org.bukkit.Location;
+import org.bukkit.Server;
+
 import com.earth2me.essentials.User;
 import com.earth2me.essentials.api.IWarps;
 import com.earth2me.essentials.utils.NumberUtil;
 import com.earth2me.essentials.utils.StringUtil;
-import net.ess3.api.InvalidWorldException;
-import org.bukkit.Location;
-import org.bukkit.Server;
 
-import static com.earth2me.essentials.I18n.tl;
+import net.ess3.api.InvalidWorldException;
 
 
 public class Commandsetwarp extends EssentialsCommand {

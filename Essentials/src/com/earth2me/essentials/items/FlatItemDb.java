@@ -1,21 +1,30 @@
 package com.earth2me.essentials.items;
 
-import com.earth2me.essentials.ManagedFile;
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import net.ess3.api.IEssentials;
+import static com.earth2me.essentials.I18n.tl;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.logging.Logger;
+import java.util.stream.Collectors;
+
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.potion.PotionData;
 
-import java.util.*;
-import java.util.logging.Logger;
-import java.util.stream.Collectors;
+import com.earth2me.essentials.ManagedFile;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
-import static com.earth2me.essentials.I18n.tl;
+import net.ess3.api.IEssentials;
 
 
 public class FlatItemDb extends AbstractItemDb {

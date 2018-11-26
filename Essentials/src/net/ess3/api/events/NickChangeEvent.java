@@ -1,7 +1,8 @@
 package net.ess3.api.events;
 
-import net.ess3.api.IUser;
 import org.bukkit.event.Cancellable;
+
+import net.ess3.api.IUser;
 
 
 public class NickChangeEvent extends StateChangeEvent implements Cancellable {

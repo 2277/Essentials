@@ -1,12 +1,12 @@
 package com.earth2me.essentials.signs;
 
-import com.earth2me.essentials.*;
-import com.earth2me.essentials.utils.NumberUtil;
-import net.ess3.api.IEssentials;
-import net.ess3.api.MaxMoneyException;
-import net.ess3.api.events.SignBreakEvent;
-import net.ess3.api.events.SignCreateEvent;
-import net.ess3.api.events.SignInteractEvent;
+import static com.earth2me.essentials.I18n.tl;
+
+import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.Locale;
+import java.util.Set;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -16,12 +16,18 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.block.SignChangeEvent;
 import org.bukkit.inventory.ItemStack;
 
-import java.math.BigDecimal;
-import java.util.HashSet;
-import java.util.Locale;
-import java.util.Set;
+import com.earth2me.essentials.ChargeException;
+import com.earth2me.essentials.CommandSource;
+import com.earth2me.essentials.MetaItemStack;
+import com.earth2me.essentials.Trade;
+import com.earth2me.essentials.User;
+import com.earth2me.essentials.utils.NumberUtil;
 
-import static com.earth2me.essentials.I18n.tl;
+import net.ess3.api.IEssentials;
+import net.ess3.api.MaxMoneyException;
+import net.ess3.api.events.SignBreakEvent;
+import net.ess3.api.events.SignCreateEvent;
+import net.ess3.api.events.SignInteractEvent;
 
 
 public class EssentialsSign {

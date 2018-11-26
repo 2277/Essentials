@@ -1,13 +1,14 @@
 package com.earth2me.essentials.commands;
 
-import com.earth2me.essentials.Teleport;
-import com.earth2me.essentials.Trade;
-import com.earth2me.essentials.User;
+import static com.earth2me.essentials.I18n.tl;
+
 import org.bukkit.Location;
 import org.bukkit.Server;
 import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 
-import static com.earth2me.essentials.I18n.tl;
+import com.earth2me.essentials.Teleport;
+import com.earth2me.essentials.Trade;
+import com.earth2me.essentials.User;
 
 
 public class Commandtpaccept extends EssentialsCommand {

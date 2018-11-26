@@ -1,24 +1,35 @@
 package com.earth2me.essentials;
 
-import com.earth2me.essentials.utils.NumberUtil;
-import com.earth2me.essentials.utils.StringUtil;
-import com.google.common.collect.ImmutableMap;
-import net.ess3.api.IEssentials;
-import net.ess3.api.InvalidWorldException;
-import net.ess3.api.MaxMoneyException;
+import static com.earth2me.essentials.I18n.tl;
+
+import java.io.File;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.UUID;
+import java.util.regex.Pattern;
+
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import java.io.File;
-import java.math.BigDecimal;
-import java.util.*;
-import java.util.Map.Entry;
-import java.util.regex.Pattern;
+import com.earth2me.essentials.utils.NumberUtil;
+import com.earth2me.essentials.utils.StringUtil;
+import com.google.common.collect.ImmutableMap;
 
-import static com.earth2me.essentials.I18n.tl;
+import net.ess3.api.IEssentials;
+import net.ess3.api.InvalidWorldException;
+import net.ess3.api.MaxMoneyException;
 
 public abstract class UserData extends PlayerExtension implements IConf {
 	protected final transient IEssentials ess;

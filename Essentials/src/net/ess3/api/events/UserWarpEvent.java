@@ -1,11 +1,12 @@
 package net.ess3.api.events;
 
-import com.earth2me.essentials.Trade;
-import net.ess3.api.IUser;
-import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
+
+import com.earth2me.essentials.Trade;
+
+import net.ess3.api.IUser;
 /**
  * Called when the player use the command /warp
  */

@@ -1,12 +1,13 @@
 package com.earth2me.essentials.commands;
 
-import com.earth2me.essentials.User;
-import org.bukkit.Server;
+import static com.earth2me.essentials.I18n.tl;
 
 import java.util.Collections;
 import java.util.List;
 
-import static com.earth2me.essentials.I18n.tl;
+import org.bukkit.Server;
+
+import com.earth2me.essentials.User;
 
 
 public class Commandignore extends EssentialsCommand {

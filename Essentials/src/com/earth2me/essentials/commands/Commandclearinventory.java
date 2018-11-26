@@ -2,18 +2,24 @@ package com.earth2me.essentials.commands;
 
 import static com.earth2me.essentials.I18n.tl;
 
-import com.earth2me.essentials.CommandSource;
-import com.earth2me.essentials.User;
-import com.earth2me.essentials.craftbukkit.InventoryWorkaround;
-import com.earth2me.essentials.utils.NumberUtil;
-import com.earth2me.essentials.utils.StringUtil;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
+import java.util.Set;
 
 import org.bukkit.Material;
 import org.bukkit.Server;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import java.util.*;
+import com.earth2me.essentials.CommandSource;
+import com.earth2me.essentials.User;
+import com.earth2me.essentials.craftbukkit.InventoryWorkaround;
+import com.earth2me.essentials.utils.NumberUtil;
+import com.earth2me.essentials.utils.StringUtil;
 
 
 public class Commandclearinventory extends EssentialsCommand {

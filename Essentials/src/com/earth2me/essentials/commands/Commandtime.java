@@ -1,16 +1,25 @@
 package com.earth2me.essentials.commands;
 
+import static com.earth2me.essentials.I18n.tl;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+
+import org.bukkit.Server;
+import org.bukkit.World;
+
 import com.earth2me.essentials.CommandSource;
 import com.earth2me.essentials.User;
 import com.earth2me.essentials.utils.DescParseTickFormat;
 import com.earth2me.essentials.utils.NumberUtil;
 import com.google.common.collect.Lists;
-import org.bukkit.Server;
-import org.bukkit.World;
-
-import java.util.*;
-
-import static com.earth2me.essentials.I18n.tl;
 
 
 public class Commandtime extends EssentialsCommand {

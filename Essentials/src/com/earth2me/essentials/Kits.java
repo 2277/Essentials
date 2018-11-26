@@ -1,8 +1,7 @@
 package com.earth2me.essentials;
 
-import com.earth2me.essentials.utils.NumberUtil;
-import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.configuration.MemoryConfiguration;
+import static com.earth2me.essentials.I18n.capitalCase;
+import static com.earth2me.essentials.I18n.tl;
 
 import java.io.File;
 import java.math.BigDecimal;
@@ -10,8 +9,10 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import static com.earth2me.essentials.I18n.capitalCase;
-import static com.earth2me.essentials.I18n.tl;
+import org.bukkit.configuration.ConfigurationSection;
+import org.bukkit.configuration.MemoryConfiguration;
+
+import com.earth2me.essentials.utils.NumberUtil;
 
 public class Kits implements IConf {
 

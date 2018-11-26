@@ -1,10 +1,11 @@
 package com.earth2me.essentials.commands;
 
-import com.earth2me.essentials.User;
-import org.bukkit.Server;
-
 import java.util.Collections;
 import java.util.List;
+
+import org.bukkit.Server;
+
+import com.earth2me.essentials.User;
 
 public class Commandenderchest extends EssentialsCommand {
     public Commandenderchest() {

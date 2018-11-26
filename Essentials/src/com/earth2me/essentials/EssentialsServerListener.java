@@ -1,18 +1,19 @@
 package com.earth2me.essentials;
 
-import net.ess3.api.IEssentials;
-import net.ess3.nms.refl.ReflUtil;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.Iterator;
+import java.util.List;
+import java.util.logging.Level;
+
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.server.ServerListPingEvent;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.Iterator;
-import java.util.List;
-import java.util.logging.Level;
+import net.ess3.api.IEssentials;
+import net.ess3.nms.refl.ReflUtil;
 
 
 public class EssentialsServerListener implements Listener {

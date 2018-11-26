@@ -1,12 +1,13 @@
 package com.earth2me.essentials.signs;
 
-import com.earth2me.essentials.ChargeException;
-import com.earth2me.essentials.Trade;
-import com.earth2me.essentials.Trade.OverflowType;
-import com.earth2me.essentials.User;
-import com.earth2me.essentials.utils.FormatUtil;
-import net.ess3.api.IEssentials;
-import net.ess3.api.MaxMoneyException;
+import static com.earth2me.essentials.I18n.tl;
+
+import java.util.EnumSet;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
+
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -14,9 +15,14 @@ import org.bukkit.block.BlockFace;
 import org.bukkit.block.Sign;
 import org.bukkit.inventory.ItemStack;
 
-import java.util.*;
+import com.earth2me.essentials.ChargeException;
+import com.earth2me.essentials.Trade;
+import com.earth2me.essentials.Trade.OverflowType;
+import com.earth2me.essentials.User;
+import com.earth2me.essentials.utils.FormatUtil;
 
-import static com.earth2me.essentials.I18n.tl;
+import net.ess3.api.IEssentials;
+import net.ess3.api.MaxMoneyException;
 
 
 @Deprecated // This sign will be removed soon

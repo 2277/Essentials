@@ -2,15 +2,15 @@ package com.earth2me.essentials.commands;
 
 import static com.earth2me.essentials.I18n.tl;
 
+import java.util.List;
+
+import org.bukkit.Server;
+
 import com.earth2me.essentials.CommandSource;
 import com.earth2me.essentials.Console;
 import com.earth2me.essentials.User;
 import com.earth2me.essentials.messaging.IMessageRecipient;
 import com.earth2me.essentials.utils.FormatUtil;
-
-import org.bukkit.Server;
-
-import java.util.List;
 
 public class Commandmsg extends EssentialsLoopCommand {
 

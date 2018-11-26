@@ -1,14 +1,15 @@
 package com.earth2me.essentials.commands;
 
-import com.earth2me.essentials.User;
+import static com.earth2me.essentials.I18n.tl;
+
+import java.util.Set;
+
 import org.bukkit.Material;
 import org.bukkit.Server;
 import org.bukkit.block.Block;
 import org.bukkit.event.block.BlockBreakEvent;
 
-import java.util.Set;
-
-import static com.earth2me.essentials.I18n.tl;
+import com.earth2me.essentials.User;
 
 
 public class Commandbreak extends EssentialsCommand {

@@ -1,9 +1,9 @@
 package com.earth2me.essentials.utils;
 
+import java.lang.reflect.Field;
+
 import org.bukkit.Material;
 import org.bukkit.Statistic;
-
-import java.lang.reflect.Field;
 
 public class EnumUtil {
 

@@ -1,10 +1,16 @@
 package com.earth2me.essentials.commands;
 
-import com.earth2me.essentials.ChargeException;
-import com.earth2me.essentials.Trade;
-import com.earth2me.essentials.Trade.OverflowType;
-import com.earth2me.essentials.User;
-import net.ess3.api.MaxMoneyException;
+import static com.earth2me.essentials.I18n.tl;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
 import org.bukkit.Material;
 import org.bukkit.Server;
 import org.bukkit.inventory.ItemStack;
@@ -12,9 +18,12 @@ import org.bukkit.inventory.Recipe;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.ShapelessRecipe;
 
-import java.util.*;
+import com.earth2me.essentials.ChargeException;
+import com.earth2me.essentials.Trade;
+import com.earth2me.essentials.Trade.OverflowType;
+import com.earth2me.essentials.User;
 
-import static com.earth2me.essentials.I18n.tl;
+import net.ess3.api.MaxMoneyException;
 
 
 public class Commandcondense extends EssentialsCommand {

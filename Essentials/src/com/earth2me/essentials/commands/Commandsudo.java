@@ -1,14 +1,16 @@
 package com.earth2me.essentials.commands;
 
-import com.earth2me.essentials.ChargeException;
-import com.earth2me.essentials.CommandSource;
-import com.earth2me.essentials.User;
-import net.ess3.api.MaxMoneyException;
-import org.bukkit.Server;
+import static com.earth2me.essentials.I18n.tl;
 
 import java.util.Locale;
 
-import static com.earth2me.essentials.I18n.tl;
+import org.bukkit.Server;
+
+import com.earth2me.essentials.ChargeException;
+import com.earth2me.essentials.CommandSource;
+import com.earth2me.essentials.User;
+
+import net.ess3.api.MaxMoneyException;
 
 
 public class Commandsudo extends EssentialsLoopCommand {

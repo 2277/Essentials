@@ -1,12 +1,12 @@
 package net.ess3.api.events;
 
-import com.google.common.base.Preconditions;
+import java.math.BigDecimal;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-import java.math.BigDecimal;
+import com.google.common.base.Preconditions;
 
 
 public class UserBalanceUpdateEvent extends Event {

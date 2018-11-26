@@ -1,17 +1,18 @@
 package com.earth2me.essentials.commands;
 
-import com.earth2me.essentials.Trade;
-import com.earth2me.essentials.User;
-import com.earth2me.essentials.utils.LocationUtil;
-import com.google.common.collect.Lists;
-import org.bukkit.Location;
-import org.bukkit.Server;
-import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
+import static com.earth2me.essentials.I18n.tl;
 
 import java.util.Collections;
 import java.util.List;
 
-import static com.earth2me.essentials.I18n.tl;
+import org.bukkit.Location;
+import org.bukkit.Server;
+import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
+
+import com.earth2me.essentials.Trade;
+import com.earth2me.essentials.User;
+import com.earth2me.essentials.utils.LocationUtil;
+import com.google.common.collect.Lists;
 
 // This method contains an undocumented sub command #EasterEgg
 public class Commandjump extends EssentialsCommand {

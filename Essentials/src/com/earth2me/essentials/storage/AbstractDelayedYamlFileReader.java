@@ -1,13 +1,14 @@
 package com.earth2me.essentials.storage;
 
-import net.ess3.api.IEssentials;
-import org.bukkit.Bukkit;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.logging.Level;
+
+import org.bukkit.Bukkit;
+
+import net.ess3.api.IEssentials;
 
 
 public abstract class AbstractDelayedYamlFileReader<T extends StorageObject> implements Runnable {

@@ -1,16 +1,18 @@
 package com.earth2me.essentials.commands;
 
+import java.util.List;
+import java.util.Locale;
+import java.util.UUID;
+
+import org.bukkit.Server;
+import org.bukkit.entity.Player;
+
 import com.earth2me.essentials.ChargeException;
 import com.earth2me.essentials.CommandSource;
 import com.earth2me.essentials.User;
 import com.earth2me.essentials.utils.FormatUtil;
-import net.ess3.api.MaxMoneyException;
-import org.bukkit.Server;
-import org.bukkit.entity.Player;
 
-import java.util.List;
-import java.util.Locale;
-import java.util.UUID;
+import net.ess3.api.MaxMoneyException;
 
 
 public abstract class EssentialsLoopCommand extends EssentialsCommand {

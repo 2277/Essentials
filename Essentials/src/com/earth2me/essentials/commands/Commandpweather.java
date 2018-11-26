@@ -1,16 +1,24 @@
 package com.earth2me.essentials.commands;
 
-import com.google.common.collect.Lists;
+import static com.earth2me.essentials.I18n.tl;
 
-import com.earth2me.essentials.CommandSource;
-import com.earth2me.essentials.User;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
+
 import org.bukkit.Server;
 import org.bukkit.WeatherType;
 import org.bukkit.entity.Player;
 
-import java.util.*;
-
-import static com.earth2me.essentials.I18n.tl;
+import com.earth2me.essentials.CommandSource;
+import com.earth2me.essentials.User;
+import com.google.common.collect.Lists;
 
 
 public class Commandpweather extends EssentialsCommand {

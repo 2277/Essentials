@@ -1,8 +1,8 @@
 package com.earth2me.essentials.perm;
 
-import org.bukkit.entity.Player;
-
 import java.util.List;
+
+import org.bukkit.entity.Player;
 
 
 public interface IPermissionsHandler {

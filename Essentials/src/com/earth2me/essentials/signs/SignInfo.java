@@ -1,5 +1,7 @@
 package com.earth2me.essentials.signs;
 
+import java.io.IOException;
+
 import com.earth2me.essentials.ChargeException;
 import com.earth2me.essentials.Trade;
 import com.earth2me.essentials.User;
@@ -7,9 +9,8 @@ import com.earth2me.essentials.textreader.IText;
 import com.earth2me.essentials.textreader.KeywordReplacer;
 import com.earth2me.essentials.textreader.TextInput;
 import com.earth2me.essentials.textreader.TextPager;
-import net.ess3.api.IEssentials;
 
-import java.io.IOException;
+import net.ess3.api.IEssentials;
 
 
 public class SignInfo extends EssentialsSign {

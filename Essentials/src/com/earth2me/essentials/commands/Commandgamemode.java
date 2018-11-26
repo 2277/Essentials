@@ -1,17 +1,18 @@
 package com.earth2me.essentials.commands;
 
-import com.earth2me.essentials.CommandSource;
-import com.earth2me.essentials.User;
-import com.google.common.collect.ImmutableList;
-import org.bukkit.GameMode;
-import org.bukkit.Server;
-import org.bukkit.entity.Player;
+import static com.earth2me.essentials.I18n.tl;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
-import static com.earth2me.essentials.I18n.tl;
+import org.bukkit.GameMode;
+import org.bukkit.Server;
+import org.bukkit.entity.Player;
+
+import com.earth2me.essentials.CommandSource;
+import com.earth2me.essentials.User;
+import com.google.common.collect.ImmutableList;
 
 
 public class Commandgamemode extends EssentialsCommand {

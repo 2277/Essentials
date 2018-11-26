@@ -1,21 +1,6 @@
 package com.earth2me.essentials.commands;
 
-import org.bukkit.plugin.Plugin;
-import org.bukkit.plugin.PluginDescriptionFile;
-import com.earth2me.essentials.CommandSource;
-import com.earth2me.essentials.PlayerList;
-import com.earth2me.essentials.IEssentialsModule;
-import com.earth2me.essentials.Trade;
-import com.earth2me.essentials.User;
-import com.earth2me.essentials.utils.FormatUtil;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Lists;
-import net.ess3.api.IEssentials;
-import org.bukkit.Server;
-import org.bukkit.command.Command;
-import org.bukkit.entity.Player;
-
-import org.bukkit.util.StringUtil;
+import static com.earth2me.essentials.I18n.tl;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,7 +11,23 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.logging.Logger;
 
-import static com.earth2me.essentials.I18n.tl;
+import org.bukkit.Server;
+import org.bukkit.command.Command;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
+import org.bukkit.plugin.PluginDescriptionFile;
+import org.bukkit.util.StringUtil;
+
+import com.earth2me.essentials.CommandSource;
+import com.earth2me.essentials.IEssentialsModule;
+import com.earth2me.essentials.PlayerList;
+import com.earth2me.essentials.Trade;
+import com.earth2me.essentials.User;
+import com.earth2me.essentials.utils.FormatUtil;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Lists;
+
+import net.ess3.api.IEssentials;
 
 
 public abstract class EssentialsCommand implements IEssentialsCommand {

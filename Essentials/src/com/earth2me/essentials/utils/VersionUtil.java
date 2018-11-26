@@ -1,13 +1,14 @@
 package com.earth2me.essentials.utils;
 
-import com.google.common.base.Objects;
-import com.google.common.base.Preconditions;
-import com.google.common.collect.ImmutableSet;
-import org.bukkit.Bukkit;
-
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import org.bukkit.Bukkit;
+
+import com.google.common.base.Objects;
+import com.google.common.base.Preconditions;
+import com.google.common.collect.ImmutableSet;
 
 //1.13.1-R0.1-SNAPSHOT
 public class VersionUtil {

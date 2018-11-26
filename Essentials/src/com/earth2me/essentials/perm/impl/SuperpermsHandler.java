@@ -1,12 +1,13 @@
 package com.earth2me.essentials.perm.impl;
 
-import com.earth2me.essentials.perm.IPermissionsHandler;
+import java.util.Arrays;
+import java.util.List;
+
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
-import java.util.Arrays;
-import java.util.List;
+import com.earth2me.essentials.perm.IPermissionsHandler;
 
 
 public class SuperpermsHandler implements IPermissionsHandler {

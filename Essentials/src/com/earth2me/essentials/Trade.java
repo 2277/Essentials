@@ -1,14 +1,6 @@
 package com.earth2me.essentials;
 
-import com.earth2me.essentials.craftbukkit.InventoryWorkaround;
-import com.earth2me.essentials.craftbukkit.SetExpFix;
-import com.earth2me.essentials.utils.NumberUtil;
-import net.ess3.api.IEssentials;
-import net.ess3.api.IUser;
-import net.ess3.api.MaxMoneyException;
-import org.bukkit.Location;
-import org.bukkit.entity.Item;
-import org.bukkit.inventory.ItemStack;
+import static com.earth2me.essentials.I18n.tl;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -21,7 +13,17 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import static com.earth2me.essentials.I18n.tl;
+import org.bukkit.Location;
+import org.bukkit.entity.Item;
+import org.bukkit.inventory.ItemStack;
+
+import com.earth2me.essentials.craftbukkit.InventoryWorkaround;
+import com.earth2me.essentials.craftbukkit.SetExpFix;
+import com.earth2me.essentials.utils.NumberUtil;
+
+import net.ess3.api.IEssentials;
+import net.ess3.api.IUser;
+import net.ess3.api.MaxMoneyException;
 
 
 public class Trade {

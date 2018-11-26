@@ -1,14 +1,16 @@
 package com.earth2me.essentials;
 
-import com.earth2me.essentials.register.payment.Methods;
-import net.ess3.api.IEssentials;
+import java.util.logging.Level;
+
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.server.PluginDisableEvent;
 import org.bukkit.event.server.PluginEnableEvent;
 
-import java.util.logging.Level;
+import com.earth2me.essentials.register.payment.Methods;
+
+import net.ess3.api.IEssentials;
 
 
 public class EssentialsPluginListener implements Listener, IConf {

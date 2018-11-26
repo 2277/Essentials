@@ -1,9 +1,10 @@
 package net.ess3.api.events;
 
-import net.ess3.api.IUser;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
+
+import net.ess3.api.IUser;
 
 
 /**

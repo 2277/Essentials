@@ -3,7 +3,6 @@ package com.earth2me.essentials;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
-import java.util.function.Supplier;
 
 import org.bukkit.World;
 import org.bukkit.command.Command;

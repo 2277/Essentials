@@ -1,13 +1,15 @@
 package com.earth2me.essentials.storage;
 
-import com.earth2me.essentials.IConf;
-import net.ess3.api.IEssentials;
-import net.ess3.api.IReload;
-import org.bukkit.Bukkit;
-
 import java.io.File;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.logging.Level;
+
+import org.bukkit.Bukkit;
+
+import com.earth2me.essentials.IConf;
+
+import net.ess3.api.IEssentials;
+import net.ess3.api.IReload;
 
 
 public abstract class AsyncStorageObjectHolder<T extends StorageObject> implements IConf, IStorageObjectHolder<T>, IReload {

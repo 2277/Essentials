@@ -1,19 +1,20 @@
 package com.earth2me.essentials.commands;
 
+import static com.earth2me.essentials.I18n.tl;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.Locale;
+
+import org.bukkit.Server;
+import org.bukkit.Statistic;
+
 import com.earth2me.essentials.CommandSource;
 import com.earth2me.essentials.User;
 import com.earth2me.essentials.craftbukkit.SetExpFix;
 import com.earth2me.essentials.utils.DateUtil;
 import com.earth2me.essentials.utils.EnumUtil;
 import com.earth2me.essentials.utils.NumberUtil;
-import org.bukkit.Server;
-import org.bukkit.Statistic;
-
-import java.util.Locale;
-import java.util.Collections;
-import java.util.List;
-
-import static com.earth2me.essentials.I18n.tl;
 
 
 public class Commandwhois extends EssentialsCommand {

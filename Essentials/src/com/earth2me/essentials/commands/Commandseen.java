@@ -1,5 +1,18 @@
 package com.earth2me.essentials.commands;
 
+import static com.earth2me.essentials.I18n.tl;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.List;
+import java.util.UUID;
+
+import org.bukkit.BanEntry;
+import org.bukkit.BanList;
+import org.bukkit.Location;
+import org.bukkit.Server;
+
 import com.earth2me.essentials.CommandSource;
 import com.earth2me.essentials.User;
 import com.earth2me.essentials.UserMap;
@@ -7,18 +20,6 @@ import com.earth2me.essentials.craftbukkit.BanLookup;
 import com.earth2me.essentials.utils.DateUtil;
 import com.earth2me.essentials.utils.FormatUtil;
 import com.earth2me.essentials.utils.StringUtil;
-import org.bukkit.BanEntry;
-import org.bukkit.BanList;
-import org.bukkit.Location;
-import org.bukkit.Server;
-
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
-import java.util.Collections;
-
-import static com.earth2me.essentials.I18n.tl;
 
 
 public class Commandseen extends EssentialsCommand {

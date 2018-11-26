@@ -1,11 +1,12 @@
 package com.earth2me.essentials.commands;
 
-import com.earth2me.essentials.User;
+import java.util.Collections;
+import java.util.List;
+
 import org.bukkit.Server;
 import org.bukkit.inventory.Inventory;
 
-import java.util.Collections;
-import java.util.List;
+import com.earth2me.essentials.User;
 
 public class Commandinvsee extends EssentialsCommand {
     public Commandinvsee() {

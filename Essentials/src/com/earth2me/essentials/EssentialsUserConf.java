@@ -1,14 +1,15 @@
 package com.earth2me.essentials;
 
-import com.google.common.base.Charsets;
-import com.google.common.io.Files;
-import org.bukkit.Bukkit;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Locale;
 import java.util.UUID;
 import java.util.logging.Level;
+
+import org.bukkit.Bukkit;
+
+import com.google.common.base.Charsets;
+import com.google.common.io.Files;
 
 
 public class EssentialsUserConf extends EssentialsConf {

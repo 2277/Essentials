@@ -1,21 +1,41 @@
 package com.earth2me.essentials.commands;
 
-import com.google.common.collect.Lists;
-
-import com.earth2me.essentials.CommandSource;
-import com.earth2me.essentials.Mob;
-import com.earth2me.essentials.User;
-import org.bukkit.Chunk;
-import org.bukkit.Server;
-import org.bukkit.World;
-import org.bukkit.entity.*;
+import static com.earth2me.essentials.I18n.tl;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
-import static com.earth2me.essentials.I18n.tl;
+import org.bukkit.Chunk;
+import org.bukkit.Server;
+import org.bukkit.World;
+import org.bukkit.entity.Ambient;
+import org.bukkit.entity.Animals;
+import org.bukkit.entity.Boat;
+import org.bukkit.entity.ComplexLivingEntity;
+import org.bukkit.entity.EnderCrystal;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.ExperienceOrb;
+import org.bukkit.entity.Flying;
+import org.bukkit.entity.HumanEntity;
+import org.bukkit.entity.Item;
+import org.bukkit.entity.ItemFrame;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Minecart;
+import org.bukkit.entity.Monster;
+import org.bukkit.entity.NPC;
+import org.bukkit.entity.Painting;
+import org.bukkit.entity.Projectile;
+import org.bukkit.entity.Slime;
+import org.bukkit.entity.Snowman;
+import org.bukkit.entity.Tameable;
+import org.bukkit.entity.WaterMob;
+
+import com.earth2me.essentials.CommandSource;
+import com.earth2me.essentials.Mob;
+import com.earth2me.essentials.User;
+import com.google.common.collect.Lists;
 
 // This could be rewritten in a simpler form if we made a mapping of all Entity names to their types (which would also provide possible mod support)
 

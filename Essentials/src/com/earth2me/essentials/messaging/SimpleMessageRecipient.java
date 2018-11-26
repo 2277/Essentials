@@ -2,12 +2,11 @@ package com.earth2me.essentials.messaging;
 
 import static com.earth2me.essentials.I18n.tl;
 
-import com.earth2me.essentials.Console;
+import java.lang.ref.WeakReference;
+
 import com.earth2me.essentials.IEssentials;
 import com.earth2me.essentials.IUser;
 import com.earth2me.essentials.User;
-
-import java.lang.ref.WeakReference;
 
 /**
  * Represents a simple reusable implementation of {@link IMessageRecipient}. This class provides functionality for the following methods:

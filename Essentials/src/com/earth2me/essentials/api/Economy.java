@@ -1,20 +1,21 @@
 package com.earth2me.essentials.api;
 
-import com.earth2me.essentials.EssentialsUserConf;
-import com.earth2me.essentials.Trade;
-import com.earth2me.essentials.User;
-import com.earth2me.essentials.utils.NumberUtil;
-import com.earth2me.essentials.utils.StringUtil;
-import com.google.common.base.Charsets;
-import net.ess3.api.IEssentials;
-import net.ess3.api.MaxMoneyException;
-
 import java.io.File;
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import com.earth2me.essentials.EssentialsUserConf;
+import com.earth2me.essentials.Trade;
+import com.earth2me.essentials.User;
+import com.earth2me.essentials.utils.NumberUtil;
+import com.earth2me.essentials.utils.StringUtil;
+import com.google.common.base.Charsets;
+
+import net.ess3.api.IEssentials;
+import net.ess3.api.MaxMoneyException;
 
 
 /**

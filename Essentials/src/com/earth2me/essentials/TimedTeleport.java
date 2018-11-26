@@ -1,13 +1,14 @@
 package com.earth2me.essentials;
 
-import net.ess3.api.IEssentials;
-import net.ess3.api.IUser;
-import org.bukkit.Location;
-import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
+import static com.earth2me.essentials.I18n.tl;
 
 import java.util.UUID;
 
-import static com.earth2me.essentials.I18n.tl;
+import org.bukkit.Location;
+import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
+
+import net.ess3.api.IEssentials;
+import net.ess3.api.IUser;
 
 
 public class TimedTeleport implements Runnable {

@@ -1,13 +1,14 @@
 package com.earth2me.essentials.commands;
 
-import com.earth2me.essentials.CommandSource;
-import com.earth2me.essentials.User;
-import com.google.common.collect.Lists;
+import java.util.Collections;
+import java.util.List;
+
 import org.bukkit.Server;
 import org.bukkit.entity.Player;
 
-import java.util.Collections;
-import java.util.List;
+import com.earth2me.essentials.CommandSource;
+import com.earth2me.essentials.User;
+import com.google.common.collect.Lists;
 
 
 public abstract class EssentialsToggleCommand extends EssentialsCommand {

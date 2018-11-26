@@ -1,11 +1,11 @@
 package com.earth2me.essentials.utils;
 
+import static com.earth2me.essentials.I18n.tl;
+
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import static com.earth2me.essentials.I18n.tl;
 
 
 public class DateUtil {

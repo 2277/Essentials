@@ -1,16 +1,22 @@
 package com.earth2me.essentials.textreader;
 
-import com.earth2me.essentials.User;
-import net.ess3.api.IEssentials;
-import org.bukkit.plugin.Plugin;
-import org.bukkit.plugin.PluginDescriptionFile;
+import static com.earth2me.essentials.I18n.tl;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import static com.earth2me.essentials.I18n.tl;
+import org.bukkit.plugin.Plugin;
+import org.bukkit.plugin.PluginDescriptionFile;
+
+import com.earth2me.essentials.User;
+
+import net.ess3.api.IEssentials;
 
 
 public class HelpInput implements IText {

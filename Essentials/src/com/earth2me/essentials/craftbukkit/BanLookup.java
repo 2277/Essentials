@@ -1,11 +1,13 @@
 package com.earth2me.essentials.craftbukkit;
 
-import com.earth2me.essentials.User;
-import net.ess3.api.IEssentials;
+import java.util.Set;
+
 import org.bukkit.BanEntry;
 import org.bukkit.BanList;
 
-import java.util.Set;
+import com.earth2me.essentials.User;
+
+import net.ess3.api.IEssentials;
 
 
 public class BanLookup {

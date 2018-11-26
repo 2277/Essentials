@@ -2,6 +2,14 @@ package com.earth2me.essentials.commands;
 
 import static com.earth2me.essentials.I18n.tl;
 
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
+import org.bukkit.Server;
+import org.bukkit.World;
+import org.bukkit.entity.Player;
+
 import com.earth2me.essentials.CommandSource;
 import com.earth2me.essentials.User;
 import com.earth2me.essentials.textreader.IText;
@@ -9,14 +17,6 @@ import com.earth2me.essentials.textreader.KeywordReplacer;
 import com.earth2me.essentials.textreader.SimpleTextInput;
 import com.earth2me.essentials.utils.FormatUtil;
 import com.google.common.collect.Lists;
-
-import org.bukkit.Server;
-import org.bukkit.World;
-import org.bukkit.entity.Player;
-
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
 
 
 public class Commandbroadcastworld extends EssentialsCommand {

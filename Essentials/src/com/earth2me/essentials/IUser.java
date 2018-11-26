@@ -1,18 +1,20 @@
 package com.earth2me.essentials;
 
-import com.earth2me.essentials.commands.IEssentialsCommand;
-import net.ess3.api.ITeleport;
-import net.ess3.api.MaxMoneyException;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.entity.Player;
-
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.regex.Pattern;
+
+import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.entity.Player;
+
+import com.earth2me.essentials.commands.IEssentialsCommand;
+
+import net.ess3.api.ITeleport;
+import net.ess3.api.MaxMoneyException;
 
 
 public interface IUser {

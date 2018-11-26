@@ -1,15 +1,16 @@
 package com.earth2me.essentials.commands;
 
-import com.earth2me.essentials.CommandSource;
-import com.earth2me.essentials.User;
-import org.bukkit.Server;
-import org.bukkit.entity.Player;
-import org.bukkit.event.entity.EntityDamageEvent;
+import static com.earth2me.essentials.I18n.tl;
 
 import java.util.Collections;
 import java.util.List;
 
-import static com.earth2me.essentials.I18n.tl;
+import org.bukkit.Server;
+import org.bukkit.entity.Player;
+import org.bukkit.event.entity.EntityDamageEvent;
+
+import com.earth2me.essentials.CommandSource;
+import com.earth2me.essentials.User;
 
 
 public class Commandkill extends EssentialsLoopCommand {

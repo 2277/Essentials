@@ -1,11 +1,11 @@
 package com.earth2me.essentials.utils;
 
-import org.bukkit.Material;
+import static com.earth2me.essentials.utils.EnumUtil.getMaterial;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import static com.earth2me.essentials.utils.EnumUtil.getMaterial;
+import org.bukkit.Material;
 
 public class MaterialUtil {
 

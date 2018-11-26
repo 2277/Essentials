@@ -1,10 +1,8 @@
 package com.earth2me.essentials.signs;
 
-import com.earth2me.essentials.I18n;
-import com.earth2me.essentials.User;
-import com.earth2me.essentials.utils.FormatUtil;
-import net.ess3.api.IEssentials;
-import net.ess3.api.MaxMoneyException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -13,10 +11,20 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.*;
+import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.block.BlockBurnEvent;
+import org.bukkit.event.block.BlockIgniteEvent;
+import org.bukkit.event.block.BlockPistonExtendEvent;
+import org.bukkit.event.block.BlockPistonRetractEvent;
+import org.bukkit.event.block.BlockPlaceEvent;
+import org.bukkit.event.block.SignChangeEvent;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import com.earth2me.essentials.I18n;
+import com.earth2me.essentials.User;
+import com.earth2me.essentials.utils.FormatUtil;
+
+import net.ess3.api.IEssentials;
+import net.ess3.api.MaxMoneyException;
 
 
 public class SignBlockListener implements Listener {

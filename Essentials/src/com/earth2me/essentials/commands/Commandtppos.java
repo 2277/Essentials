@@ -1,19 +1,20 @@
 package com.earth2me.essentials.commands;
 
-import com.earth2me.essentials.CommandSource;
-import com.earth2me.essentials.Trade;
-import com.earth2me.essentials.User;
-import com.earth2me.essentials.utils.FloatUtil;
-import com.google.common.collect.Lists;
+import static com.earth2me.essentials.I18n.tl;
+
+import java.util.Collections;
+import java.util.List;
+
 import org.bukkit.Location;
 import org.bukkit.Server;
 import org.bukkit.World;
 import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 
-import java.util.Collections;
-import java.util.List;
-
-import static com.earth2me.essentials.I18n.tl;
+import com.earth2me.essentials.CommandSource;
+import com.earth2me.essentials.Trade;
+import com.earth2me.essentials.User;
+import com.earth2me.essentials.utils.FloatUtil;
+import com.google.common.collect.Lists;
 
 
 public class Commandtppos extends EssentialsCommand {

@@ -1,6 +1,6 @@
 package com.earth2me.essentials.utils;
 
-import net.ess3.api.IEssentials;
+import static com.earth2me.essentials.I18n.tl;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -9,7 +9,7 @@ import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.Locale;
 
-import static com.earth2me.essentials.I18n.tl;
+import net.ess3.api.IEssentials;
 
 public class NumberUtil {
 

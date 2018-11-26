@@ -1,11 +1,11 @@
 package com.earth2me.essentials.textreader;
 
+import static com.earth2me.essentials.I18n.tl;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-
-import static com.earth2me.essentials.I18n.tl;
 
 
 public class BookPager {

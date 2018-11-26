@@ -1,16 +1,20 @@
 package com.earth2me.essentials;
 
+import static com.earth2me.essentials.I18n.tl;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import org.bukkit.Location;
 import org.bukkit.Server;
 import org.bukkit.World;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
-
-import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import static com.earth2me.essentials.I18n.tl;
 
 
 // Suffixes can be appended on the end of a mob name to make it plural

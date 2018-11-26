@@ -1,10 +1,10 @@
 package com.earth2me.essentials;
 
-import com.earth2me.essentials.messaging.IMessageRecipient;
-import com.earth2me.essentials.messaging.SimpleMessageRecipient;
-
 import org.bukkit.Server;
 import org.bukkit.command.CommandSender;
+
+import com.earth2me.essentials.messaging.IMessageRecipient;
+import com.earth2me.essentials.messaging.SimpleMessageRecipient;
 
 
 public final class Console implements IMessageRecipient {

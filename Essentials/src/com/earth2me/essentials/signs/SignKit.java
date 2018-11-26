@@ -1,15 +1,16 @@
 package com.earth2me.essentials.signs;
 
+import static com.earth2me.essentials.I18n.tl;
+
+import java.util.Locale;
+
 import com.earth2me.essentials.ChargeException;
 import com.earth2me.essentials.Kit;
 import com.earth2me.essentials.Trade;
 import com.earth2me.essentials.User;
 import com.earth2me.essentials.commands.NoChargeException;
+
 import net.ess3.api.IEssentials;
-
-import java.util.Locale;
-
-import static com.earth2me.essentials.I18n.tl;
 
 
 public class SignKit extends EssentialsSign {

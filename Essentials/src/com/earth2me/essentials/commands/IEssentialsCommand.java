@@ -1,12 +1,15 @@
 package com.earth2me.essentials.commands;
 
+import java.util.List;
+
+import org.bukkit.Server;
+import org.bukkit.command.Command;
+
 import com.earth2me.essentials.CommandSource;
 import com.earth2me.essentials.IEssentialsModule;
 import com.earth2me.essentials.User;
+
 import net.ess3.api.IEssentials;
-import org.bukkit.Server;
-import org.bukkit.command.Command;
-import java.util.List;
 
 
 public interface IEssentialsCommand {

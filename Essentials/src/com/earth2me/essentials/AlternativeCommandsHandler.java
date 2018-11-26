@@ -1,14 +1,20 @@
 package com.earth2me.essentials;
 
-import net.ess3.api.IEssentials;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import org.bukkit.command.Command;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.command.PluginCommandYamlParser;
 import org.bukkit.plugin.Plugin;
 
-import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import net.ess3.api.IEssentials;
 
 
 public class AlternativeCommandsHandler {

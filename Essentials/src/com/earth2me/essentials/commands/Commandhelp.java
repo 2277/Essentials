@@ -1,16 +1,21 @@
 package com.earth2me.essentials.commands;
 
-import com.earth2me.essentials.CommandSource;
-import com.earth2me.essentials.User;
-import com.earth2me.essentials.textreader.*;
-import com.earth2me.essentials.utils.NumberUtil;
-import org.bukkit.Server;
+import static com.earth2me.essentials.I18n.tl;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
-import static com.earth2me.essentials.I18n.tl;
+import org.bukkit.Server;
+
+import com.earth2me.essentials.CommandSource;
+import com.earth2me.essentials.User;
+import com.earth2me.essentials.textreader.HelpInput;
+import com.earth2me.essentials.textreader.IText;
+import com.earth2me.essentials.textreader.KeywordReplacer;
+import com.earth2me.essentials.textreader.TextInput;
+import com.earth2me.essentials.textreader.TextPager;
+import com.earth2me.essentials.utils.NumberUtil;
 
 
 public class Commandhelp extends EssentialsCommand {

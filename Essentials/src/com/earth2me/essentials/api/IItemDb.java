@@ -1,11 +1,12 @@
 package com.earth2me.essentials.api;
 
-import com.earth2me.essentials.User;
+import java.util.Collection;
+import java.util.List;
+
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
-import java.util.Collection;
-import java.util.List;
+import com.earth2me.essentials.User;
 
 
 public interface IItemDb {

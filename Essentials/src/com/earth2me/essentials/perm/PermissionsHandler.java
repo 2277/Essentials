@@ -1,13 +1,21 @@
 package com.earth2me.essentials.perm;
 
-import com.earth2me.essentials.Essentials;
-import com.earth2me.essentials.perm.impl.*;
-import org.bukkit.entity.Player;
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.logging.Level;
+
+import org.bukkit.entity.Player;
+
+import com.earth2me.essentials.Essentials;
+import com.earth2me.essentials.perm.impl.AbstractVaultHandler;
+import com.earth2me.essentials.perm.impl.BPermissions2Handler;
+import com.earth2me.essentials.perm.impl.ConfigPermissionsHandler;
+import com.earth2me.essentials.perm.impl.GenericVaultHandler;
+import com.earth2me.essentials.perm.impl.PermissionsExHandler;
+import com.earth2me.essentials.perm.impl.PrivilegesHandler;
+import com.earth2me.essentials.perm.impl.SimplyPermsHandler;
+import com.earth2me.essentials.perm.impl.SuperpermsHandler;
 
 public class PermissionsHandler implements IPermissionsHandler {
     private transient IPermissionsHandler handler = null;

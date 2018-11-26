@@ -7,14 +7,12 @@ import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collectors;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Server;
 import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 
 import com.earth2me.essentials.Trade;
 import com.earth2me.essentials.User;
-import com.earth2me.essentials.utils.StringUtil;
 
 public class Commandhome extends EssentialsCommand {
 	public Commandhome() {

@@ -1,10 +1,11 @@
 package com.earth2me.essentials.signs;
 
+import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.User;
 import com.earth2me.essentials.utils.NumberUtil;
-import net.ess3.api.IEssentials;
 
-import static com.earth2me.essentials.I18n.tl;
+import net.ess3.api.IEssentials;
 
 
 public class SignBalance extends EssentialsSign {

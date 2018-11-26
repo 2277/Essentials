@@ -1,6 +1,5 @@
 package com.earth2me.essentials.signs;
 
-import net.ess3.api.IEssentials;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.event.EventHandler;
@@ -8,6 +7,8 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityChangeBlockEvent;
 import org.bukkit.event.entity.EntityExplodeEvent;
+
+import net.ess3.api.IEssentials;
 
 
 public class SignEntityListener implements Listener {

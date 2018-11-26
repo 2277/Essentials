@@ -1,8 +1,7 @@
 package com.earth2me.essentials;
 
-import com.earth2me.essentials.utils.EnumUtil;
-import com.earth2me.essentials.utils.LocationUtil;
-import net.ess3.api.IEssentials;
+import java.util.Locale;
+
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.block.BlockState;
@@ -14,7 +13,10 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.inventory.ItemStack;
 
-import java.util.Locale;
+import com.earth2me.essentials.utils.EnumUtil;
+import com.earth2me.essentials.utils.LocationUtil;
+
+import net.ess3.api.IEssentials;
 
 
 public class EssentialsBlockListener implements Listener {

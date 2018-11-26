@@ -1,16 +1,18 @@
 package com.earth2me.essentials.commands;
 
-import com.earth2me.essentials.CommandSource;
-import com.earth2me.essentials.OfflinePlayer;
-import com.earth2me.essentials.User;
-import com.earth2me.essentials.utils.DateUtil;
-import net.ess3.api.events.MuteStatusChangeEvent;
-import org.bukkit.Server;
+import static com.earth2me.essentials.I18n.tl;
 
 import java.util.List;
 import java.util.logging.Level;
 
-import static com.earth2me.essentials.I18n.tl;
+import org.bukkit.Server;
+
+import com.earth2me.essentials.CommandSource;
+import com.earth2me.essentials.OfflinePlayer;
+import com.earth2me.essentials.User;
+import com.earth2me.essentials.utils.DateUtil;
+
+import net.ess3.api.events.MuteStatusChangeEvent;
 
 
 public class Commandmute extends EssentialsCommand {

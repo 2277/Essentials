@@ -1,15 +1,19 @@
 package com.earth2me.essentials;
 
-import com.earth2me.essentials.textreader.BookInput;
-import com.earth2me.essentials.textreader.BookPager;
-import com.earth2me.essentials.textreader.IText;
-import com.earth2me.essentials.utils.FormatUtil;
-import com.earth2me.essentials.utils.NumberUtil;
-import com.google.common.base.Joiner;
-import net.ess3.api.IEssentials;
-import net.ess3.nms.refl.ReflUtil;
+import static com.earth2me.essentials.I18n.tl;
 
-import org.apache.commons.lang.ArrayUtils;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
+import java.util.logging.Level;
+import java.util.regex.Pattern;
+
 import org.bukkit.Color;
 import org.bukkit.DyeColor;
 import org.bukkit.FireworkEffect;
@@ -19,17 +23,28 @@ import org.bukkit.block.banner.PatternType;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.*;
+import org.bukkit.inventory.meta.BannerMeta;
+import org.bukkit.inventory.meta.BlockStateMeta;
+import org.bukkit.inventory.meta.BookMeta;
+import org.bukkit.inventory.meta.EnchantmentStorageMeta;
+import org.bukkit.inventory.meta.FireworkMeta;
+import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.LeatherArmorMeta;
+import org.bukkit.inventory.meta.PotionMeta;
+import org.bukkit.inventory.meta.SkullMeta;
 import org.bukkit.potion.Potion;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import java.lang.reflect.Method;
-import java.util.*;
-import java.util.logging.Level;
-import java.util.regex.Pattern;
+import com.earth2me.essentials.textreader.BookInput;
+import com.earth2me.essentials.textreader.BookPager;
+import com.earth2me.essentials.textreader.IText;
+import com.earth2me.essentials.utils.FormatUtil;
+import com.earth2me.essentials.utils.NumberUtil;
+import com.google.common.base.Joiner;
 
-import static com.earth2me.essentials.I18n.tl;
+import net.ess3.api.IEssentials;
+import net.ess3.nms.refl.ReflUtil;
 
 
 public class MetaItemStack {

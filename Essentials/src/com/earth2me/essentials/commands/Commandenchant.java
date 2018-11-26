@@ -1,25 +1,26 @@
 package com.earth2me.essentials.commands;
 
-import com.earth2me.essentials.Enchantments;
-import com.earth2me.essentials.MetaItemStack;
-import com.earth2me.essentials.User;
-import com.earth2me.essentials.craftbukkit.InventoryWorkaround;
-import com.earth2me.essentials.utils.StringUtil;
-import com.google.common.collect.Lists;
-import org.bukkit.Material;
-import org.bukkit.Server;
-import org.bukkit.enchantments.Enchantment;
-import org.bukkit.inventory.ItemStack;
+import static com.earth2me.essentials.I18n.tl;
 
-import java.util.Collections;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
-import static com.earth2me.essentials.I18n.tl;
+import org.bukkit.Material;
+import org.bukkit.Server;
+import org.bukkit.enchantments.Enchantment;
+import org.bukkit.inventory.ItemStack;
+
+import com.earth2me.essentials.Enchantments;
+import com.earth2me.essentials.MetaItemStack;
+import com.earth2me.essentials.User;
+import com.earth2me.essentials.craftbukkit.InventoryWorkaround;
+import com.earth2me.essentials.utils.StringUtil;
+import com.google.common.collect.Lists;
 
 
 public class Commandenchant extends EssentialsCommand {

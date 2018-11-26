@@ -1,14 +1,15 @@
 package com.earth2me.essentials.commands;
 
-import com.earth2me.essentials.User;
-import com.google.common.collect.Lists;
-import org.bukkit.Server;
-import org.bukkit.World;
+import static com.earth2me.essentials.I18n.tl;
 
 import java.util.Collections;
 import java.util.List;
 
-import static com.earth2me.essentials.I18n.tl;
+import org.bukkit.Server;
+import org.bukkit.World;
+
+import com.earth2me.essentials.User;
+import com.google.common.collect.Lists;
 
 
 public class Commandthunder extends EssentialsCommand {

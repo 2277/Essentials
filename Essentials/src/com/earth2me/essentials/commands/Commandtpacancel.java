@@ -2,12 +2,11 @@ package com.earth2me.essentials.commands;
 
 import static com.earth2me.essentials.I18n.tl;
 
-import com.earth2me.essentials.I18n;
+import org.bukkit.Server;
+
 import com.earth2me.essentials.User;
 
 import net.ess3.api.IEssentials;
-
-import org.bukkit.Server;
 
 
 public class Commandtpacancel extends EssentialsCommand {

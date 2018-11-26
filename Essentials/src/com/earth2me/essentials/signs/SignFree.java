@@ -1,14 +1,16 @@
 package com.earth2me.essentials.signs;
 
-import com.earth2me.essentials.Trade;
-import com.earth2me.essentials.User;
-import net.ess3.api.IEssentials;
+import static com.earth2me.essentials.I18n.tl;
+
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import static com.earth2me.essentials.I18n.tl;
+import com.earth2me.essentials.Trade;
+import com.earth2me.essentials.User;
+
+import net.ess3.api.IEssentials;
 
 
 public class SignFree extends EssentialsSign {

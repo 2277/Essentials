@@ -1,17 +1,18 @@
 package com.earth2me.essentials.commands;
 
-import com.earth2me.essentials.CommandSource;
-import com.earth2me.essentials.User;
+import static com.earth2me.essentials.I18n.tl;
+
+import java.util.Collections;
+import java.util.List;
+
 import org.bukkit.Server;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityRegainHealthEvent;
 import org.bukkit.event.entity.EntityRegainHealthEvent.RegainReason;
 import org.bukkit.potion.PotionEffect;
 
-import java.util.Collections;
-import java.util.List;
-
-import static com.earth2me.essentials.I18n.tl;
+import com.earth2me.essentials.CommandSource;
+import com.earth2me.essentials.User;
 
 
 public class Commandheal extends EssentialsLoopCommand {

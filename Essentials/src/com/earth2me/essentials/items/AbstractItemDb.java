@@ -1,8 +1,12 @@
 package com.earth2me.essentials.items;
 
-import com.earth2me.essentials.IConf;
-import com.earth2me.essentials.User;
-import com.earth2me.essentials.utils.StringUtil;
+import static com.earth2me.essentials.I18n.tl;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Set;
+
 import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
 import org.bukkit.Material;
@@ -10,16 +14,20 @@ import org.bukkit.block.Banner;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.*;
+import org.bukkit.inventory.meta.BannerMeta;
+import org.bukkit.inventory.meta.BlockStateMeta;
+import org.bukkit.inventory.meta.BookMeta;
+import org.bukkit.inventory.meta.EnchantmentStorageMeta;
+import org.bukkit.inventory.meta.FireworkMeta;
+import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.LeatherArmorMeta;
+import org.bukkit.inventory.meta.SkullMeta;
 import org.bukkit.potion.Potion;
 import org.bukkit.potion.PotionEffect;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Set;
-
-import static com.earth2me.essentials.I18n.tl;
+import com.earth2me.essentials.IConf;
+import com.earth2me.essentials.User;
+import com.earth2me.essentials.utils.StringUtil;
 
 public abstract class AbstractItemDb implements IConf, net.ess3.api.IItemDb {
 

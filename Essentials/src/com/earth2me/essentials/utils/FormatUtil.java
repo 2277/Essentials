@@ -1,9 +1,10 @@
 package com.earth2me.essentials.utils;
 
-import net.ess3.api.IUser;
+import java.util.regex.Pattern;
+
 import org.bukkit.ChatColor;
 
-import java.util.regex.Pattern;
+import net.ess3.api.IUser;
 
 
 public class FormatUtil {

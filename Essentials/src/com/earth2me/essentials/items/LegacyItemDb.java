@@ -1,21 +1,29 @@
 package com.earth2me.essentials.items;
 
-import com.earth2me.essentials.ManagedFile;
-import com.earth2me.essentials.utils.EnumUtil;
-import com.earth2me.essentials.utils.NumberUtil;
-import net.ess3.api.IEssentials;
-import net.ess3.nms.refl.ReflUtil;
+import static com.earth2me.essentials.I18n.tl;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
 import org.bukkit.inventory.ItemStack;
 
-import java.util.*;
-import java.util.logging.Logger;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import com.earth2me.essentials.ManagedFile;
+import com.earth2me.essentials.utils.EnumUtil;
+import com.earth2me.essentials.utils.NumberUtil;
 
-import static com.earth2me.essentials.I18n.tl;
+import net.ess3.api.IEssentials;
+import net.ess3.nms.refl.ReflUtil;
 
 
 public class LegacyItemDb extends AbstractItemDb {

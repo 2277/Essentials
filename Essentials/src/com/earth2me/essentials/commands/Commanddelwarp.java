@@ -1,13 +1,14 @@
 package com.earth2me.essentials.commands;
 
-import com.earth2me.essentials.CommandSource;
-import org.bukkit.Server;
+import static com.earth2me.essentials.I18n.tl;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static com.earth2me.essentials.I18n.tl;
+import org.bukkit.Server;
+
+import com.earth2me.essentials.CommandSource;
 
 
 public class Commanddelwarp extends EssentialsCommand {

@@ -1,12 +1,14 @@
 package com.earth2me.essentials.signs;
 
+import static com.earth2me.essentials.I18n.tl;
+
+import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
+
 import com.earth2me.essentials.ChargeException;
 import com.earth2me.essentials.Trade;
 import com.earth2me.essentials.User;
-import net.ess3.api.IEssentials;
-import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 
-import static com.earth2me.essentials.I18n.tl;
+import net.ess3.api.IEssentials;
 
 
 public class SignWarp extends EssentialsSign {

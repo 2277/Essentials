@@ -1,19 +1,25 @@
 package com.earth2me.essentials.commands;
 
-import com.earth2me.essentials.CommandSource;
-import com.earth2me.essentials.User;
-import com.earth2me.essentials.utils.NumberUtil;
-import org.bukkit.Material;
-import org.bukkit.Server;
-import org.bukkit.inventory.*;
+import static com.earth2me.essentials.I18n.tl;
 
-import java.util.HashMap;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import static com.earth2me.essentials.I18n.tl;
+import org.bukkit.Material;
+import org.bukkit.Server;
+import org.bukkit.inventory.FurnaceRecipe;
+import org.bukkit.inventory.InventoryView;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.Recipe;
+import org.bukkit.inventory.ShapedRecipe;
+import org.bukkit.inventory.ShapelessRecipe;
+
+import com.earth2me.essentials.CommandSource;
+import com.earth2me.essentials.User;
+import com.earth2me.essentials.utils.NumberUtil;
 
 import net.ess3.nms.refl.ReflUtil;
 
