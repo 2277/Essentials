@@ -276,9 +276,6 @@ commands:
     description: Creates a new warp.
     usage: /<command> <warp>
     aliases: [createwarp]
-  setworth:
-    description: Set the sell value of an item.
-    usage: /<command> [itemname|id] <price>
   showkit:
     description: Show contents of a kit.
     usage: /<command> <kitname>
@@ -392,10 +389,6 @@ commands:
   world:
     description: Switch between worlds.
     usage: /<command> [world]
-  worth:
-    description: Calculates the worth of items in hand or as specified.
-    usage: /<command> <<itemname>|<id>|hand|inventory|blocks> [-][amount]
-    aliases: [price]
 
 permissions:
   essentials.*:

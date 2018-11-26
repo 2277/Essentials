@@ -92,7 +92,6 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials {
     private transient ISettings settings;
     private final transient TNTExplodeListener tntListener = new TNTExplodeListener(this);
     private transient Warps warps;
-    private transient Worth worth;
     private transient List<IConf> confList;
     private transient Backup backup;
     private transient AbstractItemDb itemDb;
@@ -206,8 +205,6 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials {
                 warps = new Warps(getServer(), this.getDataFolder());
                 confList.add(warps);
                 execTimer.mark("Init(Spawn/Warp)");
-                worth = new Worth(this.getDataFolder());
-                confList.add(worth);
                 itemDb = getItemDbFromConfig();
                 confList.add(itemDb);
                 execTimer.mark("Init(Worth/ItemDB)");
@@ -565,11 +562,6 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials {
     @Override
     public Warps getWarps() {
         return warps;
-    }
-
-    @Override
-    public Worth getWorth() {
-        return worth;
     }
 
     @Override
