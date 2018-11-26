@@ -1,12 +1,41 @@
 package com.earth2me.essentials;
 
-import com.earth2me.essentials.craftbukkit.FakeWorld;
-import org.bukkit.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.UUID;
+import java.util.concurrent.Callable;
+import java.util.concurrent.Future;
+import java.util.function.Consumer;
+import java.util.logging.Logger;
+
+import org.bukkit.BanList;
+import org.bukkit.Bukkit;
+import org.bukkit.GameMode;
+import org.bukkit.Keyed;
+import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
+import org.bukkit.Server;
+import org.bukkit.StructureType;
+import org.bukkit.Tag;
+import org.bukkit.UnsafeValues;
 import org.bukkit.Warning.WarningState;
+import org.bukkit.World;
 import org.bukkit.World.Environment;
+import org.bukkit.WorldCreator;
 import org.bukkit.advancement.Advancement;
 import org.bukkit.block.data.BlockData;
-import org.bukkit.boss.*;
+import org.bukkit.boss.BarColor;
+import org.bukkit.boss.BarFlag;
+import org.bukkit.boss.BarStyle;
+import org.bukkit.boss.BossBar;
+import org.bukkit.boss.KeyedBossBar;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.command.PluginCommand;
@@ -21,14 +50,27 @@ import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.help.HelpMap;
-import org.bukkit.inventory.*;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.InventoryHolder;
+import org.bukkit.inventory.ItemFactory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.Merchant;
+import org.bukkit.inventory.Recipe;
 import org.bukkit.loot.LootTable;
 import org.bukkit.map.MapView;
 import org.bukkit.permissions.Permissible;
 import org.bukkit.permissions.Permission;
 import org.bukkit.permissions.PermissionAttachment;
 import org.bukkit.permissions.PermissionAttachmentInfo;
-import org.bukkit.plugin.*;
+import org.bukkit.plugin.EventExecutor;
+import org.bukkit.plugin.InvalidDescriptionException;
+import org.bukkit.plugin.InvalidPluginException;
+import org.bukkit.plugin.Plugin;
+import org.bukkit.plugin.PluginLoader;
+import org.bukkit.plugin.PluginManager;
+import org.bukkit.plugin.RegisteredListener;
+import org.bukkit.plugin.ServicesManager;
+import org.bukkit.plugin.UnknownDependencyException;
 import org.bukkit.plugin.messaging.Messenger;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitScheduler;
@@ -37,14 +79,7 @@ import org.bukkit.scheduler.BukkitWorker;
 import org.bukkit.scoreboard.ScoreboardManager;
 import org.bukkit.util.CachedServerIcon;
 
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.UnsupportedEncodingException;
-import java.util.*;
-import java.util.concurrent.Callable;
-import java.util.concurrent.Future;
-import java.util.function.Consumer;
-import java.util.logging.Logger;
+import com.earth2me.essentials.craftbukkit.FakeWorld;
 
 public class FakeServer implements Server {
 	private List<Player> players = new ArrayList<Player>();
@@ -155,48 +190,14 @@ public class FakeServer implements Server {
 	@Override
 	public BukkitScheduler getScheduler() {
 		return new BukkitScheduler() {
+
 			@Override
-			public int scheduleSyncDelayedTask(Plugin plugin, Runnable r, long l) {
+			public <T> Future<T> callSyncMethod(Plugin plugin, Callable<T> task) {
 				throw new UnsupportedOperationException("Not supported yet.");
 			}
 
 			@Override
-			public int scheduleSyncDelayedTask(Plugin plugin, BukkitRunnable bukkitRunnable, long l) {
-				throw new UnsupportedOperationException("Not supported yet.");
-			}
-
-			@Override
-			public int scheduleSyncDelayedTask(Plugin plugin, Runnable r) {
-				throw new UnsupportedOperationException("Not supported yet.");
-			}
-
-			@Override
-			public int scheduleSyncDelayedTask(Plugin plugin, BukkitRunnable bukkitRunnable) {
-				throw new UnsupportedOperationException("Not supported yet.");
-			}
-
-			@Override
-			public int scheduleSyncRepeatingTask(Plugin plugin, Runnable r, long l, long l1) {
-				throw new UnsupportedOperationException("Not supported yet.");
-			}
-
-			@Override
-			public int scheduleSyncRepeatingTask(Plugin plugin, BukkitRunnable bukkitRunnable, long l, long l1) {
-				throw new UnsupportedOperationException("Not supported yet.");
-			}
-
-			@Override
-			public int scheduleAsyncRepeatingTask(Plugin plugin, Runnable r, long l, long l1) {
-				throw new UnsupportedOperationException("Not supported yet.");
-			}
-
-			@Override
-			public <T> Future<T> callSyncMethod(Plugin plugin, Callable<T> clbl) {
-				throw new UnsupportedOperationException("Not supported yet.");
-			}
-
-			@Override
-			public void cancelTask(int i) {
+			public void cancelTask(int taskId) {
 				throw new UnsupportedOperationException("Not supported yet.");
 			}
 
@@ -206,12 +207,12 @@ public class FakeServer implements Server {
 			}
 
 			@Override
-			public boolean isCurrentlyRunning(int i) {
+			public boolean isCurrentlyRunning(int taskId) {
 				throw new UnsupportedOperationException("Not supported yet.");
 			}
 
 			@Override
-			public boolean isQueued(int i) {
+			public boolean isQueued(int taskId) {
 				throw new UnsupportedOperationException("Not supported yet.");
 			}
 
@@ -226,83 +227,156 @@ public class FakeServer implements Server {
 			}
 
 			@Override
-			public BukkitTask runTask(Plugin plugin, Runnable r) throws IllegalArgumentException {
+			public BukkitTask runTask(Plugin plugin, Runnable task) throws IllegalArgumentException {
 				throw new UnsupportedOperationException("Not supported yet.");
 			}
 
 			@Override
-			public BukkitTask runTask(Plugin plugin, BukkitRunnable bukkitRunnable) throws IllegalArgumentException {
-				return null;
-			}
-
-			@Override
-			public BukkitTask runTaskAsynchronously(Plugin plugin, Runnable r) throws IllegalArgumentException {
-				r.run();
-				return null;
-			}
-
-			@Override
-			public BukkitTask runTaskAsynchronously(Plugin plugin, BukkitRunnable bukkitRunnable)
-					throws IllegalArgumentException {
-				return null;
-			}
-
-			@Override
-			public BukkitTask runTaskLater(Plugin plugin, Runnable r, long l) throws IllegalArgumentException {
+			public void runTask(Plugin arg0, Consumer<BukkitTask> arg1) throws IllegalArgumentException {
 				throw new UnsupportedOperationException("Not supported yet.");
 			}
 
 			@Override
-			public BukkitTask runTaskLater(Plugin plugin, BukkitRunnable bukkitRunnable, long l)
-					throws IllegalArgumentException {
+			public BukkitTask runTask(Plugin plugin, BukkitRunnable task) throws IllegalArgumentException {
 				return null;
 			}
 
 			@Override
-			public BukkitTask runTaskLaterAsynchronously(Plugin plugin, Runnable r, long l)
-					throws IllegalArgumentException {
-				r.run();
+			public BukkitTask runTaskAsynchronously(Plugin plugin, Runnable task) throws IllegalArgumentException {
+				task.run();
 				return null;
 			}
 
 			@Override
-			public BukkitTask runTaskLaterAsynchronously(Plugin plugin, BukkitRunnable bukkitRunnable, long l)
-					throws IllegalArgumentException {
-				return null;
-			}
-
-			@Override
-			public BukkitTask runTaskTimer(Plugin plugin, Runnable r, long l, long l1) throws IllegalArgumentException {
+			public void runTaskAsynchronously(Plugin arg0, Consumer<BukkitTask> arg1) throws IllegalArgumentException {
 				throw new UnsupportedOperationException("Not supported yet.");
 			}
 
 			@Override
-			public BukkitTask runTaskTimer(Plugin plugin, BukkitRunnable bukkitRunnable, long l, long l1)
+			public BukkitTask runTaskAsynchronously(Plugin plugin, BukkitRunnable task)
 					throws IllegalArgumentException {
 				return null;
 			}
 
 			@Override
-			public BukkitTask runTaskTimerAsynchronously(Plugin plugin, Runnable r, long l, long l1)
-					throws IllegalArgumentException {
+			public BukkitTask runTaskLater(Plugin plugin, Runnable task, long delay) throws IllegalArgumentException {
 				throw new UnsupportedOperationException("Not supported yet.");
 			}
 
 			@Override
-			public BukkitTask runTaskTimerAsynchronously(Plugin plugin, BukkitRunnable bukkitRunnable, long l, long l1)
+			public void runTaskLater(Plugin arg0, Consumer<BukkitTask> arg1, long arg2)
+					throws IllegalArgumentException {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public BukkitTask runTaskLater(Plugin plugin, BukkitRunnable task, long delay)
 					throws IllegalArgumentException {
 				return null;
 			}
 
 			@Override
-			public int scheduleAsyncDelayedTask(Plugin plugin, Runnable r, long l) {
+			public BukkitTask runTaskLaterAsynchronously(Plugin plugin, Runnable task, long delay)
+					throws IllegalArgumentException {
+				task.run();
+				return null;
+			}
+
+			@Override
+			public void runTaskLaterAsynchronously(Plugin arg0, Consumer<BukkitTask> arg1, long arg2)
+					throws IllegalArgumentException {
 				throw new UnsupportedOperationException("Not supported yet.");
 			}
 
 			@Override
-			public int scheduleAsyncDelayedTask(Plugin plugin, Runnable r) {
+			public int scheduleSyncDelayedTask(Plugin plugin, BukkitRunnable task) {
 				throw new UnsupportedOperationException("Not supported yet.");
 			}
+
+			@Override
+			public int scheduleAsyncDelayedTask(Plugin plugin, Runnable task) {
+				throw new UnsupportedOperationException("Not supported yet.");
+			}
+
+			@Override
+			public int scheduleAsyncRepeatingTask(Plugin plugin, Runnable task, long delay, long period) {
+				throw new UnsupportedOperationException("Not supported yet.");
+			}
+
+			@Override
+			public BukkitTask runTaskLaterAsynchronously(Plugin plugin, BukkitRunnable task, long delay)
+					throws IllegalArgumentException {
+				throw new UnsupportedOperationException("Not supported yet.");
+			}
+
+			@Override
+			public BukkitTask runTaskTimer(Plugin plugin, Runnable task, long delay, long period)
+					throws IllegalArgumentException {
+				throw new UnsupportedOperationException("Not supported yet.");
+			}
+
+			@Override
+			public void runTaskTimer(Plugin arg0, Consumer<BukkitTask> arg1, long arg2, long arg3)
+					throws IllegalArgumentException {
+				throw new UnsupportedOperationException("Not supported yet.");
+			}
+
+			@Override
+			public int scheduleSyncDelayedTask(Plugin plugin, Runnable task, long delay) {
+				throw new UnsupportedOperationException("Not supported yet.");
+			}
+
+			@Override
+			public int scheduleSyncDelayedTask(Plugin plugin, BukkitRunnable task, long delay) {
+				throw new UnsupportedOperationException("Not supported yet.");
+			}
+
+			@Override
+			public BukkitTask runTaskTimer(Plugin plugin, BukkitRunnable task, long delay, long period)
+					throws IllegalArgumentException {
+				throw new UnsupportedOperationException("Not supported yet.");
+			}
+
+			@Override
+			public BukkitTask runTaskTimerAsynchronously(Plugin plugin, Runnable task, long delay, long period)
+					throws IllegalArgumentException {
+				throw new UnsupportedOperationException("Not supported yet.");
+			}
+
+			@Override
+			public void runTaskTimerAsynchronously(Plugin arg0, Consumer<BukkitTask> arg1, long arg2, long arg3)
+					throws IllegalArgumentException {
+				throw new UnsupportedOperationException("Not supported yet.");
+			}
+
+			@Override
+			public int scheduleSyncDelayedTask(Plugin plugin, Runnable task) {
+				throw new UnsupportedOperationException("Not supported yet.");
+			}
+
+			@Override
+			public int scheduleSyncRepeatingTask(Plugin plugin, Runnable task, long delay, long period) {
+				throw new UnsupportedOperationException("Not supported yet.");
+			}
+
+			@Override
+			public int scheduleSyncRepeatingTask(Plugin plugin, BukkitRunnable task, long delay, long period) {
+				throw new UnsupportedOperationException("Not supported yet.");
+			}
+
+			@Override
+			public int scheduleAsyncDelayedTask(Plugin plugin, Runnable task, long delay) {
+				throw new UnsupportedOperationException("Not supported yet.");
+			}
+
+			@Override
+			public BukkitTask runTaskTimerAsynchronously(Plugin plugin, BukkitRunnable task, long delay, long period)
+					throws IllegalArgumentException {
+				throw new UnsupportedOperationException("Not supported yet.");
+			}
+
+			
 		};
 	}
 
