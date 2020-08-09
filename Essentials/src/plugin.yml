@@ -514,7 +514,7 @@ commands:
     aliases: [etppos]
   tpchunk:
     description: Teleport to chunk.
-    usage: /<command> <x> <z> [yaw] [pitch] [world]
+    usage: /<command> <x> <z> [world]
     aliases: [etpchunk]
   tpr:
     description: Teleport randomly.
