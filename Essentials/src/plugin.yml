@@ -512,6 +512,10 @@ commands:
     description: Teleport to coordinates.
     usage: /<command> <x> <y> <z> [yaw] [pitch] [world]
     aliases: [etppos]
+  tpchunk:
+    description: Teleport to chunk.
+    usage: /<command> <x> <z> [yaw] [pitch] [world]
+    aliases: [etpchunk]
   tpr:
     description: Teleport randomly.
     usage: /<command>
